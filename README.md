@@ -7,7 +7,7 @@
 ## Evaluación 1
 
 - [UD1 - Internet, características y evolución - 9h](./UD1/readme.md)
-- UD2 - El lenguaje HTML - 19h
+- [UD2 - El lenguaje HTML - 19h](./UD2/readme.md)
 - UD3 - Hojas de Estilos. CSS. - 17h
 - UD4 - Lenguajes de Script: Javascript. - 22h
 - UD5 - Diseño Web con frameworks. Bootstrap / Tailwind. - 15h
