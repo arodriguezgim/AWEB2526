@@ -16,13 +16,16 @@
     <h1>Listas</h1>
     <p>Existen dos tipos de listas en HTML.</p>
     <h2>Listas Desordenadas</h2>
+    <!-- Las listas desordenadas son las más usadas y van dentro de ul-->
+    <!-- Pueden ser de tipo disc (defecto), square, circle y none -->
     <ul style="list-style: disc">
         <li>Elemento 1</li>
         <li>Elemento 2</li>
         <li>Elemento 3</li>
     </ul>
+    <!--Las listas ordenadas se ponen con la etiqueta ol-->
     <h2>Listas Ordenadas</h2>
-    <ol type="i">
+    <ol type="1" start="30" reversed>
         <li>Elemento 1</li>
         <li>Elemento 2</li>
         <li>Elemento 3</li>
@@ -33,5 +36,38 @@
         <li>Elemento 8</li>
         <li>Elemento 9</li>
     </ol>
+    <!-- Listas ANIDADAS -->
+     <h2>Listas anidadas</h2>
+     <ul>
+        <li>Huesca
+            <ul>
+                <li>Alquézar</li>
+                <li>Sallent de Gállego</li>
+                <li>Jaca
+                    <ul style="list-style: disc;">
+                        <li>Astún</li>
+                        <li>Candanchú</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Zaragoza</li>
+        <li>Teruel
+            <ol>
+                <li>Cella
+                    <ol type="a">
+                        <li>Drogadictos</li>
+                        <li>Discomóvil</li>
+                        <li>Orquesta</li>
+                        <li>Peñas</li>
+                    </ol>
+                </li>
+                <li>Alfambra</li>
+                <li>Torrelacárcel</li>
+                <li>Allepuz</li>
+                <li>Villaspesa andando</li>
+            </ol>
+        </li>
+     </ul>
 </body>
 </html>
