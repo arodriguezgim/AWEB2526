@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- nav indica que esto es un menú de navegación-->
+            <a href="./index.html">Inicio</a>
+            <a href="./enlaces.html">Enlaces y textos</a>
+            <a href="./listas.html">Listas</a>
+            <a href="./tablas.html">Tablas</a>
+            <a href="./html5.html">Nuevas etiquetas HTML 5</a>
+            <a href="./formularios.html">Formularios</a>
+            <hr>
+        </nav> 
+        <h1>Formularios en HTML</h1>
+    </header>
+    <main>
+            <!-- La etiqueta form indica el inicio del formulario-->
+        <form action="/formulario.html" method="post">
+            <p>
+                <label for="nombre_principal">Nombre:</label>
+                <input id="nombre_principal" type="text" name="nombre" placeholder="Nombre principal"/>
+            </p>
+            <p>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="primer_apellido" name="apellido" placeholder="Primer Apellido">
+            </p>
+            <p>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Contraseña">
+            </p>
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    
+</body>
+</html>
