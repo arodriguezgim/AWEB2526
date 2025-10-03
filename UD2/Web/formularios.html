@@ -22,19 +22,108 @@
     <main>
             <!-- La etiqueta form indica el inicio del formulario-->
         <form action="/formulario.html" method="post">
-            <p>
-                <label for="nombre_principal">Nombre:</label>
-                <input id="nombre_principal" type="text" name="nombre" placeholder="Nombre principal"/>
-            </p>
-            <p>
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="primer_apellido" name="apellido" placeholder="Primer Apellido">
-            </p>
-            <p>
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" placeholder="Contraseña">
-            </p>
-            <input type="submit" value="Enviar">
+            <fieldset>
+                <legend>Formulario de Registro de usuario</legend>
+                <p>
+                    <label for="nombre_principal">Nombre:</label>
+                    <input id="nombre_principal" type="text" name="nombre" placeholder="Nombre principal"/>
+                </p>
+                <p>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="primer_apellido" name="apellido" placeholder="Primer Apellido">
+                </p>
+                <p>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" placeholder="Contraseña">
+                </p>
+                
+            </fieldset>
+            <fieldset>
+                <legend>Género</legend>
+                <p>Selecciona tu género:</p>
+                <input type="radio" name="genero" id="masculino" value="M">
+                <label for="masculino">Masculino</label> <br>
+                <input type="radio" name="genero" id="femenino" value="F">
+                <label for="femenino">Femenino</label>
+            </fieldset>
+            <fieldset>
+                <legend>Módulo favorito</legend>
+                <input type="radio" name="modulofavorito" id="redes" value="RED">
+                <label for="redes">Redes Locales</label><br>
+                <input type="radio" name="modulofavorito" id="aplicaciones" value="AWEB">
+                <label for="aplicaciones">Aplicaciones Web</label><br>
+                <input type="radio" name="modulofavorito" id="seguridad" value="SI">
+                <label for="seguridad">Seguridad Informática</label><br>   
+            </fieldset>
+            <fieldset>
+                <legend>Selecciona tus profesores favoritos:</legend>
+                <input type="checkbox" name="profes" id="ester" value="ES">
+                <label for="ester">Ester</label>
+                <input type="checkbox" name="profes" id="pascual" value="PA">
+                <label for="pascual">Pascual</label>
+                <input type="checkbox" name="profes" id="julio" value="JU">
+                <label for="julio">Julio</label>
+                <input type="checkbox" name="profes" id="lidia" value="LI">
+                <label for="lidia">Lidia</label>
+            </fieldset>
+            <fieldset>
+                <legend>Selecciona tu curso:</legend>
+                <select name="curso" id="curso">
+                    <option value="">-- Selecciona --</option>
+                    <option value="1smr">1º SMR</option>
+                    <option value="2smr">2º SMR</option>
+                    <option value="1dam">1º DAM</option>
+                    <option value="2dam">2º DAM</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Más datos personales</legend>
+                <p>
+                    <label for="dni">DNI</label>
+                    <input type="text" name="dni" id="dni" pattern="[0-9]{8}-[A-Z]{1}">
+                </p>
+                <p>
+                    <label for="tfno">Teléfono Móvil:</label>
+                    <input type="tel" name="tfno" id="tfno" pattern="[0-9]{9}">
+                </p>
+                <p>
+                    <label for="fecha">Fecha de Nacimiento</label>
+                    <input type="date" name="fecha" id="fecha" max="2025-01-01" >
+                </p>
+                <p>
+                    <label for="hora">Hora de nacimiento:</label>
+                    <input type="time" name="hora" id="hora">
+                </p>
+                <p>
+                    <label for="edad">Edad</label>
+                    <input type="number" name="edad" id="edad" min="0" max="100">
+                </p>
+                <p>
+                    <label for="valoracion">Valoración</label>
+                    <input type="range" name="rango" id="valoracion" min="0" max="10" step="0.5">
+                </p>
+                <p>
+                    <label for="color">Color Favorito</label>
+                    <input type="color" name="color" id="color">
+                </p>
+                <p>
+                    <label for="foto">Sube tu foto:</label>
+                    <input type="file" name="foto" id="foto">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Otros datos:</legend>
+                <p>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" name="email" id="email" placeholder="e-mail">
+                </p>
+                <p>
+                    <label for="asunto">Asunto:</label>
+                    <textarea name="asunto" id="asunto" cols="60" rows="10" placeholder="Escribe tu asunto aquí"></textarea>
+                </p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar formulario">
+            </fieldset>
         </form>
     </main>
 
