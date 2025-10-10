@@ -1,11 +1,42 @@
 /* TODO LO QUE CONTIENE ESTE ARCHIVO ES CODIGO CSS*/
-
+/* El asterisco es el selector universal*/
 body {
-    background-color: lightpink;
-    font-family: Arial, Helvetica, sans-serif
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
+
+/* Selectores de etiqueta */
+/*
 p {
-    color: red;
+    color: slateblue;
+}
+    */
+/* Selectores de ID */
+/*
+#castellano {
+    color: tomato;
+    font-size: 20px;
+}
+    */
+/* Selectores de clase */
+.alberto {
+    color: grey;
     background-color: aquamarine;
+}
+.textogrande {
+    font-size: 25px;
+}
+.textoverde {
+    color: green;
+}
+.azulgoogle {
+    color: #4285F4;
+}
+div h2, div h3 {
+    color: #4285F4;
+}
+div {
+    border-width: 5px;
+    border: solid;
+    border-color: black;
 }
