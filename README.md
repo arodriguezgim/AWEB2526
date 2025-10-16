@@ -11,6 +11,7 @@
     - [Ejercicios HTML](./UD2/Dia2/ejercicioshtml.md)
     - [Ejercicios de Formularios en HTML](./UD2/ejerciciosformularios.md)
 - [UD3 - Hojas de Estilos. CSS. - 17h](./UD3/readme.md)
+    - [Ejercicios CSS](./UD3/ejercicios1css/readme.md)
 - UD4 - Lenguajes de Script: Javascript. - 22h
 - UD5 - Diseño Web con frameworks. Bootstrap / Tailwind. - 15h
 
