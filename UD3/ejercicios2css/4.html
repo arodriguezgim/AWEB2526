@@ -2,145 +2,51 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 4 - Display Block, Inline e Inline-Block</title>
+    <title>Ejercicio 4 - Display None vs Visibility</title>
     <style>
         /*
-        ╔════════════════════════════════════════════════════════════════════╗
-        ║  EJERCICIO 4: DISPLAY - BLOCK, INLINE E INLINE-BLOCK             ║
-        ╠════════════════════════════════════════════════════════════════════╣
-        ║                                                                    ║
-        ║  ENUNCIADO:                                                        ║
-        ║  ----------                                                        ║
-        ║  Experimenta con los diferentes valores de display para           ║
-        ║  entender cómo afectan al comportamiento de los elementos.        ║
-        ║                                                                    ║
-        ║  Para .elemento-block:                                            ║
-        ║  1. display: block                                                ║
-        ║  2. width: 200px                                                   ║
-        ║  3. height: 80px                                                   ║
-        ║  4. background: #3498db                                           ║
-        ║  5. color: white                                                  ║
-        ║  6. margin: 10px                                                   ║
-        ║  7. padding: 15px                                                  ║
-        ║                                                                    ║
-        ║  Para .elemento-inline:                                           ║
-        ║  1. display: inline                                               ║
-        ║  2. background: #e74c3c                                           ║
-        ║  3. color: white                                                  ║
-        ║  4. padding: 10px 15px                                            ║
-        ║  5. margin: 10px (observa que no funciona verticalmente)          ║
-        ║                                                                    ║
-        ║  Para .elemento-inline-block:                                     ║
-        ║  1. display: inline-block                                         ║
-        ║  2. width: 150px                                                   ║
-        ║  3. height: 80px                                                   ║
-        ║  4. background: #27ae60                                           ║
-        ║  5. color: white                                                  ║
-        ║  6. margin: 10px                                                   ║
-        ║  7. padding: 15px                                                  ║
-        ║  8. vertical-align: top                                           ║
-        ║                                                                    ║
-        ║  OBJETIVO: Comprender las diferencias entre block, inline e       ║
-        ║            inline-block                                           ║
-        ║                                                                    ║
-        ╚════════════════════════════════════════════════════════════════════╝
+        EJERCICIO 4: DISPLAY NONE VS VISIBILITY HIDDEN
+        
+        Instrucciones:
+        1. Dale a todas las .caja un width de 200px, height de 100px
+        2. Añade padding de 15px, margin de 10px
+        3. Fondo #9b59b6 y color white, text-align center
+        4. Dale a .oculta-display un display: none
+        5. Observa que desaparece completamente y NO ocupa espacio
+        6. Dale a .oculta-visibility un visibility: hidden
+        7. Observa que es invisible pero SÍ ocupa espacio
         */
         
-        /* Reset básico */
+        /* SOLUCIÓN */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            padding: 20px;
+           
         }
         
-        /* TU CÓDIGO AQUÍ */
-        .elemento-block {
-            /* Completa según el enunciado */
+        .caja {
+            
         }
         
-        .elemento-inline {
-            /* Completa según el enunciado */
+        .oculta-display {
+            
+            /* No ocupa espacio en el documento */
         }
         
-        .elemento-inline-block {
-            /* Completa según el enunciado */
-        }
-        
-        /* Estilos auxiliares (NO MODIFICAR) */
-        .seccion {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .info {
-            background-color: #fff3cd;
-            padding: 15px;
-            border-left: 4px solid #ffc107;
-            margin: 20px 0;
-        }
-        
-        h1 {
-            color: #333;
-        }
-        
-        h2 {
-            color: #555;
-            margin-top: 0;
-        }
-        
-        code {
-            background: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: monospace;
+        .oculta-visibility {
+            
+            /* Ocupa espacio pero no es visible */
         }
     </style>
 </head>
 <body>
-    <h1>Ejercicio 4: Display - Block, Inline e Inline-Block</h1>
+    <h2>Diferencia entre display:none y visibility:hidden</h2>
     
-    <div class="info">
-        <h3>📚 Conceptos clave:</h3>
-        <p><strong>block:</strong> Ocupa todo el ancho disponible, empieza en nueva línea, acepta width/height</p>
-        <p><strong>inline:</strong> Solo ocupa el espacio de su contenido, NO acepta width/height, NO rompe línea</p>
-        <p><strong>inline-block:</strong> Combina ambos: no rompe línea PERO acepta width/height</p>
-    </div>
+    <div class="caja">Caja Visible 1</div>
+    <div class="caja oculta-display">Caja con display:none</div>
+    <div class="caja">Caja Visible 2</div>
+    <div class="caja oculta-visibility">Caja con visibility:hidden</div>
+    <div class="caja">Caja Visible 3</div>
     
-    <div class="seccion">
-        <h2>1. Display: Block (azul)</h2>
-        <p>Los elementos block ocupan todo el ancho disponible y empiezan en una nueva línea:</p>
-        <div class="elemento-block">Elemento 1</div>
-        <div class="elemento-block">Elemento 2</div>
-        <div class="elemento-block">Elemento 3</div>
-    </div>
-    
-    <div class="seccion">
-        <h2>2. Display: Inline (rojo)</h2>
-        <p>Los elementos inline fluyen con el texto y NO aceptan width/height:</p>
-        <span class="elemento-inline">Inline 1</span>
-        <span class="elemento-inline">Inline 2</span>
-        <span class="elemento-inline">Inline 3</span>
-        <span class="elemento-inline">Inline 4</span>
-        <p>Observa que están en la misma línea y el margin vertical no funciona.</p>
-    </div>
-    
-    <div class="seccion">
-        <h2>3. Display: Inline-Block (verde)</h2>
-        <p>Los elementos inline-block no rompen línea pero SÍ aceptan width/height:</p>
-        <div class="elemento-inline-block">Inline-Block 1</div>
-        <div class="elemento-inline-block">Inline-Block 2</div>
-        <div class="elemento-inline-block">Inline-Block 3</div>
-    </div>
-    
-    <div class="info">
-        <h3>✅ Resultado esperado:</h3>
-        <p>✓ Los elementos <code>block</code> (azules) están apilados verticalmente</p>
-        <p>✓ Los elementos <code>inline</code> (rojos) están en línea, sin width/height</p>
-        <p>✓ Los elementos <code>inline-block</code> (verdes) están en línea CON width/height</p>
-    </div>
+    <p><strong>Nota:</strong> La caja con display:none desaparece completamente. 
+       La caja con visibility:hidden deja un espacio vacío.</p>
 </body>
 </html>
