@@ -1,0 +1,32 @@
+/* Esto es un comentario en CSS */
+/* Selector de elemento */
+nav {
+    background-color: rgb(231, 118, 42);
+}
+/* Agrupacion de selectores*/
+h1, h2 {
+    color: brown;
+}
+/* Selectores descendientes */
+div > p {
+    font-weight: bold;
+}
+p {
+    color: red;
+}
+
+/* Selectores de clase */
+.textoazul {
+    /* Hexadecimal
+    color: #FF5722 */
+    /* RGB */
+    color: rgba(0, 0, 255, 1)
+}
+
+.textogrande {
+    font-size: 1.2em;
+}
+/* Selectores de ID */
+#saludo {
+    background-color: lightgreen;
+}

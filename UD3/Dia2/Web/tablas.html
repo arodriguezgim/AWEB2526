@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <style>
+        /* esto es codigo css */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Inicio</a>
+        <a href="./enlaces.html">Enlaces y textos</a>
+        <a href="./listas.html">Listas</a>
+        <a href="./tablas.html">Tablas</a>
+        <a href="./html5.html">Nuevas etiquetas HTML 5</a>
+        <a href="./formularios.html">Formularios</a>
+        <hr>
+    </nav>
+    <h1>Tablas en HTML</h1>
+    <!-- Tablas en HTML -->
+    <table>
+        <tr><!-- tr indica que hay una fila -->
+            <th>Equipo</th>
+            <th>Ligas</th>
+            <th>Copas del rey</th>
+            <th>Champions</th>
+            <th>Campeonatos del mundo</th>
+            <th>Veces mejor equipo del siglo</th>
+        </tr>
+        <tr>
+            <td>Real Madrid</td>
+            <td>36</td>
+            <td>20</td>
+            <td>15</td>
+            <td>9</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>FC Barcelona</td>
+            <td>28</td>
+            <td>32</td>
+            <td>5</td>
+            <td>3</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table width="50%">
+        <tr>
+            <th></th>
+            <th>Lunes</th>
+            <th>Martes</th>
+        </tr>
+        <tr>
+            <td>8:30 - 9:20</td>
+            <td rowspan="2">FOL</td>
+            <td>Proyecto</td>
+        </tr>
+        <tr>
+            <td>9:25 - 10:15</td>
+            <!--<td>FOL</td>-->
+            <td>SRED</td>
+        </tr>
+        <tr>
+            <td colspan="3">RECREO</td>
+            <!--<td colspan="2">RECREO</td>
+            <td>RECREO</td>-->
+        </tr>
+    </table>
+    <!-- con los atributos colspan y rowspan podemos fusionar celdas-->
+    <hr>
+    <p class="textogrande">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum delectus beatae, nihil esse sint quaerat omnis eligendi tempore fuga nam soluta ipsa velit laboriosam hic minus neque facilis accusantium tempora, aliquid commodi maxime. 
+        <br>
+        Ipsa impedit illum libero itaque, necessitatibus, natus tempora blanditiis, laudantium error suscipit repudiandae vero quae. Enim sed distinctio id explicabo ipsum temporibus voluptate, harum voluptas, iusto voluptatum iste illo rem cupiditate vel sapiente laborum totam! Commodi accusamus cumque libero reprehenderit fugit alias eaque magni architecto labore quibusdam. Excepturi aliquid facere, doloremque totam ipsam molestias nobis harum amet aspernatur sint maxime deserunt beatae. Adipisci dolor nobis tempora possimus?</p>
+
+    <hr>
+    <pre>
+        Alberto R.
+
+
+        
+
+        C/ Santo Domingo 23
+
+        44003 - Teruel
+
+        7689304948
+    </pre>
+    
+</body>
+</html>
