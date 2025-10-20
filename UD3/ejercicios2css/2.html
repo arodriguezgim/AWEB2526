@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Box Sizing Border Box</title>
+    <style>
+        /*
+        ╔════════════════════════════════════════════════════════════════════╗
+        ║  EJERCICIO 2: BOX-SIZING BORDER-BOX                               ║
+        ╠════════════════════════════════════════════════════════════════════╣
+        ║                                                                    ║
+        ║  ENUNCIADO:                                                        ║
+        ║  ----------                                                        ║
+        ║  Observa las dos cajas. Ambas tienen width: 300px, pero una       ║
+        ║  tiene más espacio interno.                                       ║
+        ║                                                                    ║
+        ║  Aplica los siguientes estilos:                                   ║
+        ║                                                                    ║
+        ║  Para .caja1 (box-sizing: content-box - comportamiento default):  ║
+        ║  1. Ancho: 300px                                                   ║
+        ║  2. Padding: 30px                                                  ║
+        ║  3. Border: 5px solid #e74c3c                                     ║
+        ║  4. Fondo: #ffcccc                                                ║
+        ║  5. Margin: 20px                                                   ║
+        ║                                                                    ║
+        ║  Para .caja2 (box-sizing: border-box):                            ║
+        ║  1. Ancho: 300px                                                   ║
+        ║  2. Padding: 30px                                                  ║
+        ║  3. Border: 5px solid #27ae60                                     ║
+        ║  4. Fondo: #d4edda                                                ║
+        ║  5. Margin: 20px                                                   ║
+        ║  6. box-sizing: border-box                                        ║
+        ║                                                                    ║
+        ║  OBJETIVO: Entender la diferencia entre content-box y border-box  ║
+        ║                                                                    ║
+        ╚════════════════════════════════════════════════════════════════════╝
+        */
+        
+        /* Reset básico */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        /* TU CÓDIGO AQUÍ */
+        .caja1 {
+            /* Completa según el enunciado - content-box */
+        }
+        
+        .caja2 {
+            /* Completa según el enunciado - border-box */
+        }
+        
+        /* Estilos informativos (NO MODIFICAR) */
+        h1 {
+            color: #333;
+        }
+        
+        h2 {
+            color: #555;
+            margin-top: 30px;
+        }
+        
+        .info {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+        }
+        
+        .comparacion {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .item {
+            flex: 1;
+            min-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 2: Box-Sizing Border-Box</h1>
+    
+    <div class="info">
+        <h3>📌 Conceptos importantes:</h3>
+        <p><strong>content-box (default):</strong> width y height se aplican SOLO al contenido.</p>
+        <p><strong>border-box:</strong> width y height incluyen padding y border.</p>
+    </div>
+    
+    <div class="comparacion">
+        <div class="item">
+            <h2>Caja 1 (content-box)</h2>
+            <div class="caja1">
+                <p><strong>Width: 300px</strong></p>
+                <p>Padding: 30px</p>
+                <p>Border: 5px</p>
+                <p><strong>Ancho total: 370px</strong></p>
+                <p>(300 + 30*2 + 5*2)</p>
+            </div>
+        </div>
+        
+        <div class="item">
+            <h2>Caja 2 (border-box)</h2>
+            <div class="caja2">
+                <p><strong>Width: 300px</strong></p>
+                <p>Padding: 30px</p>
+                <p>Border: 5px</p>
+                <p><strong>Ancho total: 300px</strong></p>
+                <p>(Todo incluido)</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="info">
+        <h3>✅ Resultado esperado:</h3>
+        <p>La caja 1 (roja) debería ser más ancha que la caja 2 (verde), aunque ambas tienen width: 300px.</p>
+        <p>La caja 2 mantiene exactamente 300px de ancho total gracias a border-box.</p>
+    </div>
+</body>
+</html>

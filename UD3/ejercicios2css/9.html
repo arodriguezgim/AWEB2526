@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9 - Z-Index y Capas</title>
+    <style>
+        /*
+        ╔════════════════════════════════════════════════════════════════════╗
+        ║  EJERCICIO 9: Z-INDEX Y CAPAS                                     ║
+        ╠════════════════════════════════════════════════════════════════════╣
+        ║                                                                    ║
+        ║  ENUNCIADO:                                                        ║
+        ║  ----------                                                        ║
+        ║  Aprende a controlar el orden de apilamiento de elementos         ║
+        ║  usando z-index. Crea una interfaz con múltiples capas.           ║
+        ║                                                                    ║
+        ║  Para .contenedor:                                                ║
+        ║  1. position: relative                                            ║
+        ║  2. width: 600px                                                   ║
+        ║  3. height: 400px                                                  ║
+        ║  4. margin: 50px auto                                             ║
+        ║  5. border: 2px solid #34495e                                     ║
+        ║                                                                    ║
+        ║  Para .capa-fondo:                                                ║
+        ║  1. position: absolute                                            ║
+        ║  2. top: 0                                                         ║
+        ║  3. left: 0                                                        ║
+        ║  4. width: 100%                                                    ║
+        ║  5. height: 100%                                                   ║
+        ║  6. background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) ║
+        ║  7. z-index: 1                                                    ║
+        ║                                                                    ║
+        ║  Para .capa-media:                                                ║
+        ║  1. position: absolute                                            ║
+        ║  2. top: 50px                                                      ║
+        ║  3. left: 50px                                                     ║
+        ║  4. width: 300px                                                   ║
+        ║  5. height: 200px                                                  ║
+        ║  6. background: white                                             ║
+        ║  7. padding: 20px                                                  ║
+        ║  8. border-radius: 10px                                           ║
+        ║  9. box-shadow: 0 5px 20px rgba(0,0,0,0.2)                       ║
+        ║  10. z-index: 2                                                   ║
+        ║                                                                    ║
+        ║  Para .capa-superior:                                             ║
+        ║  1. position: absolute                                            ║
+        ║  2. top: 100px                                                     ║
+        ║  3. left: 200px                                                    ║
+        ║  4. width: 250px                                                   ║
+        ║  5. height: 150px                                                  ║
+        ║  6. background: #f39c12                                           ║
+        ║  7. color: white                                                  ║
+        ║  8. padding: 20px                                                  ║
+        ║  9. border-radius: 8px                                            ║
+        ║  10. box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3)              ║
+        ║  11. z-index: 3                                                   ║
+        ║                                                                    ║
+        ║  Para .boton-arriba:                                              ║
+        ║  1. position: absolute                                            ║
+        ║  2. bottom: 20px                                                   ║
+        ║  3. right: 20px                                                    ║
+        ║  4. background: #e74c3c                                           ║
+        ║  5. color: white                                                  ║
+        ║  6. padding: 15px 30px                                            ║
+        ║  7. border: none                                                   ║
+        ║  8. border-radius: 5px                                            ║
+        ║  9. cursor: pointer                                               ║
+        ║  10. z-index: 10 (por encima de todo)                            ║
+        ║                                                                    ║
+        ║  OBJETIVO: Entender z-index y el contexto de apilamiento          ║
+        ║                                                                    ║
+        ╚════════════════════════════════════════════════════════════════════╝
+        */
+        
+        /* Reset básico */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf0f1;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        /* TU CÓDIGO AQUÍ */
+        .contenedor {
+            /* Completa según el enunciado */
+        }
+        
+        .capa-fondo {
+            /* Completa según el enunciado */
+        }
+        
+        .capa-media {
+            /* Completa según el enunciado */
+        }
+        
+        .capa-superior {
+            /* Completa según el enunciado */
+        }
+        
+        .boton-arriba {
+            /* Completa según el enunciado */
+        }
+        
+        /* Estilos auxiliares (NO MODIFICAR) */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        
+        .info {
+            background-color: white;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .info h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+        
+        .demo-apilamiento {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .ejemplo-caja {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .caja {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .roja {
+            background: #e74c3c;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .azul {
+            background: #3498db;
+            top: 40px;
+            left: 40px;
+            z-index: 2;
+        }
+        
+        .verde {
+            background: #27ae60;
+            top: 80px;
+            left: 80px;
+            z-index: 3;
+        }
+        
+        .boton-arriba:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
+        }
+        
+        .capa-media h2 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        
+        .capa-superior h2 {
+            margin: 0 0 10px 0;
+        }
+        
+        .tabla-zindex {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .tabla-zindex th,
+        .tabla-zindex td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        .tabla-zindex th {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .tabla-zindex tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 9: Z-Index y Capas</h1>
+    
+    <div class="info">
+        <h3>📚 Conceptos importantes sobre Z-Index:</h3>
+        <p><code>z-index</code> → Controla el orden de apilamiento en el eje Z (profundidad)</p>
+        <p><strong>Mayor z-index = más arriba</strong> (más cerca del usuario)</p>
+        <p><strong>Solo funciona con elementos posicionados</strong> (relative, absolute, fixed, sticky)</p>
+        <p><strong>Valor por defecto:</strong> auto (equivalente a 0)</p>
+        
+        <table class="tabla-zindex">
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>Z-Index</th>
+                    <th>Orden visual</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fondo gradiente</td>
+                    <td>1</td>
+                    <td>Más atrás</td>
+                </tr>
+                <tr>
+                    <td>Capa media (blanca)</td>
+                    <td>2</td>
+                    <td>Medio</td>
+                </tr>
+                <tr>
+                    <td>Capa superior (naranja)</td>
+                    <td>3</td>
+                    <td>Arriba</td>
+                </tr>
+                <tr>
+                    <td>Botón</td>
+                    <td>10</td>
+                    <td>Más arriba de todo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Demostración principal -->
+    <div class="contenedor">
+        <div class="capa-fondo"></div>
+        
+        <div class="capa-media">
+            <h2>Capa Media</h2>
+            <p><strong>z-index: 2</strong></p>
+            <p>Esta capa está por encima del fondo pero por debajo de la capa naranja.</p>
+        </div>
+        
+        <div class="capa-superior">
+            <h2>Capa Superior</h2>
+            <p><strong>z-index: 3</strong></p>
+            <p>Esta capa está por encima de todas las demás excepto el botón.</p>
+        </div>
+        
+        <button class="boton-arriba">z-index: 10</button>
+    </div>
+    
+    <!-- Demostración adicional -->
+    <div class="info">
+        <h3>🎨 Ejemplo visual de apilamiento:</h3>
+    </div>
+    
+    <div class="demo-apilamiento">
+        <div class="ejemplo-caja">
+            <div class="caja roja">Roja<br>z:1</div>
+            <div class="caja azul">Azul<br>z:2</div>
+            <div class="caja verde">Verde<br>z:3</div>
+        </div>
+    </div>
+    
+    <div class="info">
+        <h3>✅ Resultado esperado:</h3>
+        <p>✓ Fondo con gradiente morado (z-index: 1) - más atrás</p>
+        <p>✓ Caja blanca (z-index: 2) - por encima del fondo</p>
+        <p>✓ Caja naranja (z-index: 3) - solapa parcialmente la caja blanca</p>
+        <p>✓ Botón rojo (z-index: 10) - por encima de todo</p>
+        <p>✓ En el ejemplo visual: Verde sobre Azul sobre Roja</p>
+    </div>
+    
+    <div class="info">
+        <h3>💡 Consejos sobre Z-Index:</h3>
+        <p>• Usa valores con espacios (10, 20, 30...) para poder insertar capas intermedias después</p>
+        <p>• No abuses de valores muy altos (ej: 999999), usa un sistema organizado</p>
+        <p>• El z-index solo afecta dentro del mismo "stacking context"</p>
+        <p>• Un elemento hijo nunca puede estar por debajo de su padre si el padre tiene z-index</p>
+        <p>• Elementos hermanos se comparan entre sí por su z-index</p>
+    </div>
+</body>
+</html>

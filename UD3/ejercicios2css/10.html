@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 - Proyecto Integrador: Landing Page</title>
+    <style>
+        /*
+        ╔════════════════════════════════════════════════════════════════════╗
+        ║  EJERCICIO 10: PROYECTO INTEGRADOR - LANDING PAGE                 ║
+        ╠════════════════════════════════════════════════════════════════════╣
+        ║                                                                    ║
+        ║  ENUNCIADO:                                                        ║
+        ║  ----------                                                        ║
+        ║  Crea una landing page completa aplicando TODOS los conceptos     ║
+        ║  aprendidos: modelo de cajas, display y posicionamiento.          ║
+        ║                                                                    ║
+        ║  Para .header:                                                     ║
+        ║  1. position: fixed                                               ║
+        ║  2. top: 0                                                         ║
+        ║  3. left: 0                                                        ║
+        ║  4. width: 100%                                                    ║
+        ║  5. background: rgba(255, 255, 255, 0.95)                         ║
+        ║  6. padding: 20px 0                                               ║
+        ║  7. box-shadow: 0 2px 10px rgba(0,0,0,0.1)                       ║
+        ║  8. z-index: 1000                                                 ║
+        ║                                                                    ║
+        ║  Para .nav-container:                                             ║
+        ║  1. max-width: 1200px                                             ║
+        ║  2. margin: 0 auto                                                ║
+        ║  3. padding: 0 20px                                               ║
+        ║  4. display: flex                                                  ║
+        ║  5. justify-content: space-between                                ║
+        ║  6. align-items: center                                           ║
+        ║                                                                    ║
+        ║  Para .nav-menu:                                                   ║
+        ║  1. display: flex                                                  ║
+        ║  2. gap: 30px                                                      ║
+        ║  3. list-style: none                                              ║
+        ║  4. margin: 0                                                      ║
+        ║  5. padding: 0                                                     ║
+        ║                                                                    ║
+        ║  Para .hero:                                                       ║
+        ║  1. position: relative                                            ║
+        ║  2. height: 100vh                                                  ║
+        ║  3. background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) ║
+        ║  4. display: flex                                                  ║
+        ║  5. align-items: center                                           ║
+        ║  6. justify-content: center                                       ║
+        ║  7. color: white                                                  ║
+        ║  8. text-align: center                                            ║
+        ║                                                                    ║
+        ║  Para .badge-nuevo:                                               ║
+        ║  1. position: absolute                                            ║
+        ║  2. top: 100px                                                     ║
+        ║  3. right: 50px                                                    ║
+        ║  4. background: #f39c12                                           ║
+        ║  5. padding: 10px 20px                                            ║
+        ║  6. border-radius: 25px                                           ║
+        ║  7. z-index: 10                                                   ║
+        ║                                                                    ║
+        ║  Para .cards-container:                                           ║
+        ║  1. max-width: 1200px                                             ║
+        ║  2. margin: 80px auto                                             ║
+        ║  3. padding: 0 20px                                               ║
+        ║  4. display: flex                                                  ║
+        ║  5. gap: 30px                                                      ║
+        ║  6. flex-wrap: wrap                                               ║
+        ║  7. justify-content: center                                       ║
+        ║                                                                    ║
+        ║  Para .card:                                                       ║
+        ║  1. position: relative                                            ║
+        ║  2. flex: 1 1 300px                                               ║
+        ║  3. background: white                                             ║
+        ║  4. padding: 30px                                                  ║
+        ║  5. border-radius: 10px                                           ║
+        ║  6. box-shadow: 0 5px 15px rgba(0,0,0,0.1)                       ║
+        ║  7. box-sizing: border-box                                        ║
+        ║                                                                    ║
+        ║  Para .icono-card:                                                ║
+        ║  1. position: absolute                                            ║
+        ║  2. top: -25px                                                     ║
+        ║  3. left: 30px                                                     ║
+        ║  4. width: 50px                                                    ║
+        ║  5. height: 50px                                                   ║
+        ║  6. background: #e74c3c                                           ║
+        ║  7. border-radius: 50%                                            ║
+        ║  8. display: flex                                                  ║
+        ║  9. align-items: center                                           ║
+        ║  10. justify-content: center                                      ║
+        ║  11. color: white                                                 ║
+        ║  12. font-size: 24px                                              ║
+        ║                                                                    ║
+        ║  Para .cta-button:                                                ║
+        ║  1. display: inline-block                                         ║
+        ║  2. padding: 15px 40px                                            ║
+        ║  3. background: white                                             ║
+        ║  4. color: #667eea                                                ║
+        ║  5. border: none                                                   ║
+        ║  6. border-radius: 30px                                           ║
+        ║  7. font-size: 18px                                               ║
+        ║  8. cursor: pointer                                               ║
+        ║  9. margin-top: 20px                                              ║
+        ║                                                                    ║
+        ║  Para .boton-scroll:                                              ║
+        ║  1. position: fixed                                               ║
+        ║  2. bottom: 30px                                                   ║
+        ║  3. right: 30px                                                    ║
+        ║  4. width: 50px                                                    ║
+        ║  5. height: 50px                                                   ║
+        ║  6. background: #667eea                                           ║
+        ║  7. color: white                                                  ║
+        ║  8. border: none                                                   ║
+        ║  9. border-radius: 50%                                            ║
+        ║  10. cursor: pointer                                              ║
+        ║  11. z-index: 999                                                 ║
+        ║                                                                    ║
+        ║  OBJETIVO: Integrar todos los conceptos en un proyecto real       ║
+        ║                                                                    ║
+        ╚════════════════════════════════════════════════════════════════════╝
+        */
+        
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        /* TU CÓDIGO AQUÍ */
+        .header {
+            /* Completa según el enunciado */
+        }
+        
+        .nav-container {
+            /* Completa según el enunciado */
+        }
+        
+        .nav-menu {
+            /* Completa según el enunciado */
+        }
+        
+        .hero {
+            /* Completa según el enunciado */
+        }
+        
+        .badge-nuevo {
+            /* Completa según el enunciado */
+        }
+        
+        .cards-container {
+            /* Completa según el enunciado */
+        }
+        
+        .card {
+            /* Completa según el enunciado */
+        }
+        
+        .icono-card {
+            /* Completa según el enunciado */
+        }
+        
+        .cta-button {
+            /* Completa según el enunciado */
+        }
+        
+        .boton-scroll {
+            /* Completa según el enunciado */
+        }
+        
+        /* Estilos adicionales (NO MODIFICAR) */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .nav-menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            color: #667eea;
+        }
+        
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 1.3em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255,255,255,0.3);
+        }
+        
+        .card h3 {
+            margin: 30px 0 15px 0;
+            color: #2c3e50;
+        }
+        
+        .card p {
+            color: #7f8c8d;
+            line-height: 1.8;
+        }
+        
+        .seccion-titulo {
+            text-align: center;
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin: 60px 0 30px 0;
+        }
+        
+        .boton-scroll:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .badge-nuevo {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
+        
+        .info-box {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+            border-radius: 5px;
+        }
+        
+        .info-box h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .info-box ul {
+            list-style-position: inside;
+            color: #34495e;
+        }
+        
+        .info-box li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header fijo -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">🚀 MiEmpresa</div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero section -->
+    <section class="hero" id="inicio">
+        <div class="badge-nuevo">🎉 NUEVO</div>
+        <div class="hero-content">
+            <h1>Bienvenido a MiEmpresa</h1>
+            <p>Creamos soluciones digitales innovadoras que transforman tu negocio</p>
+            <button class="cta-button">Comenzar Ahora</button>
+        </div>
+    </section>
+    
+    <!-- Información del ejercicio -->
+    <div class="info-box">
+        <h3>✅ Conceptos aplicados en esta Landing Page:</h3>
+        <ul>
+            <li><strong>Modelo de Cajas:</strong> padding, margin, border en cards y contenedores</li>
+            <li><strong>Box-sizing:</strong> border-box en todas las cards para control preciso</li>
+            <li><strong>Display Flex:</strong> navegación, hero content, y grid de cards</li>
+            <li><strong>Position Fixed:</strong> header y botón de scroll</li>
+            <li><strong>Position Absolute:</strong> badge "NUEVO" e íconos de cards</li>
+            <li><strong>Position Relative:</strong> contenedores para absolute positioning</li>
+            <li><strong>Z-index:</strong> control de capas entre header, badge y botón</li>
+            <li><strong>Display inline-block:</strong> botones CTA</li>
+        </ul>
+    </div>
+    
+    <!-- Sección de servicios -->
+    <h2 class="seccion-titulo" id="servicios">Nuestros Servicios</h2>
+    
+    <div class="cards-container">
+        <div class="card">
+            <div class="icono-card">💻</div>
+            <h3>Desarrollo Web</h3>
+            <p>Creamos sitios web modernos, rápidos y responsive que destacan tu marca en el mundo digital.</p>
+            <p>Utilizamos las últimas tecnologías y mejores prácticas de la industria.</p>
+        </div>
+        
+        <div class="card">
+            <div class="icono-card">📱</div>
+            <h3>Apps Móviles</h3>
+            <p>Desarrollamos aplicaciones móviles nativas e híbridas para iOS y Android.</p>
+            <p>Experiencias de usuario excepcionales en cualquier dispositivo.</p>
+        </div>
+        
+        <div class="card">
+            <div class="icono-card">🎨</div>
+            <h3>Diseño UI/UX</h3>
+            <p>Diseñamos interfaces intuitivas y atractivas centradas en el usuario.</p>
+            <p>Cada pixel cuenta para crear experiencias memorables.</p>
+        </div>
+    </div>
+    
+    <!-- Botón scroll to top -->
+    <button class="boton-scroll" title="Volver arriba">↑</button>
+    
+    <!-- Footer -->
+    <footer id="contacto">
+        <h3>Contáctanos</h3>
+        <p>📧 info@miempresa.com | 📱 +34 123 456 789</p>
+        <p style="margin-top: 20px; opacity: 0.7;">&copy; 2024 MiEmpresa. Todos los derechos reservados.</p>
+    </footer>
+    
+    <!-- Info final -->
+    <div class="info-box" style="background: #fff3cd; border-left-color: #ffc107;">
+        <h3>🎯 Resultado esperado del ejercicio:</h3>
+        <ul>
+            <li>✓ Header fijo que permanece visible al hacer scroll</li>
+            <li>✓ Hero section con gradiente ocupando toda la altura del viewport</li>
+            <li>✓ Badge "NUEVO" posicionado absolutamente en la esquina superior derecha</li>
+            <li>✓ Cards con íconos flotantes posicionados absolutamente</li>
+            <li>✓ Botón flotante de scroll en la esquina inferior derecha</li>
+            <li>✓ Layout responsive con flexbox</li>
+            <li>✓ Espaciados consistentes usando modelo de cajas</li>
+            <li>✓ Z-index correctamente aplicado para superponer elementos</li>
+        </ul>
+    </div>
+</body>
+</html>

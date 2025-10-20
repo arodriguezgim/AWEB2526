@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 - Posicionamiento Static y Relative</title>
+    <style>
+        /*
+        ╔════════════════════════════════════════════════════════════════════╗
+        ║  EJERCICIO 6: POSICIONAMIENTO STATIC Y RELATIVE                   ║
+        ╠════════════════════════════════════════════════════════════════════╣
+        ║                                                                    ║
+        ║  ENUNCIADO:                                                        ║
+        ║  ----------                                                        ║
+        ║  Aprende la diferencia entre position static (default) y          ║
+        ║  position relative.                                               ║
+        ║                                                                    ║
+        ║  Para .contenedor:                                                ║
+        ║  1. width: 800px                                                   ║
+        ║  2. margin: 30px auto                                             ║
+        ║  3. background: white                                             ║
+        ║  4. padding: 30px                                                  ║
+        ║  5. box-shadow: 0 0 15px rgba(0,0,0,0.1)                         ║
+        ║                                                                    ║
+        ║  Para .caja-static:                                               ║
+        ║  1. position: static (default)                                    ║
+        ║  2. width: 200px                                                   ║
+        ║  3. height: 100px                                                  ║
+        ║  4. background: #95a5a6                                           ║
+        ║  5. color: white                                                  ║
+        ║  6. padding: 20px                                                  ║
+        ║  7. margin: 10px                                                   ║
+        ║  8. border-radius: 5px                                            ║
+        ║                                                                    ║
+        ║  Para .caja-relative:                                             ║
+        ║  1. position: relative                                            ║
+        ║  2. top: 30px (desplazamiento desde arriba)                       ║
+        ║  3. left: 50px (desplazamiento desde la izquierda)               ║
+        ║  4. width: 200px                                                   ║
+        ║  5. height: 100px                                                  ║
+        ║  6. background: #e74c3c                                           ║
+        ║  7. color: white                                                  ║
+        ║  8. padding: 20px                                                  ║
+        ║  9. margin: 10px                                                   ║
+        ║  10. border-radius: 5px                                           ║
+        ║  11. z-index: 10                                                  ║
+        ║                                                                    ║
+        ║  Para .caja-normal:                                               ║
+        ║  1. width: 200px                                                   ║
+        ║  2. height: 100px                                                  ║
+        ║  3. background: #3498db                                           ║
+        ║  4. color: white                                                  ║
+        ║  5. padding: 20px                                                  ║
+        ║  6. margin: 10px                                                   ║
+        ║  7. border-radius: 5px                                            ║
+        ║                                                                    ║
+        ║  OBJETIVO: Entender que relative se desplaza RELATIVO a su        ║
+        ║            posición original, pero reserva su espacio original    ║
+        ║                                                                    ║
+        ╚════════════════════════════════════════════════════════════════════╝
+        */
+        
+        /* Reset básico */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        
+        /* TU CÓDIGO AQUÍ */
+        .contenedor {
+            /* Completa según el enunciado */
+        }
+        
+        .caja-static {
+            /* Completa según el enunciado */
+        }
+        
+        .caja-relative {
+            /* Completa según el enunciado */
+        }
+        
+        .caja-normal {
+            /* Completa según el enunciado */
+        }
+        
+        /* Estilos auxiliares (NO MODIFICAR) */
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #555;
+            margin-top: 30px;
+        }
+        
+        .info {
+            background-color: #d1ecf1;
+            padding: 20px;
+            border-left: 4px solid #17a2b8;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .info h3 {
+            margin-top: 0;
+            color: #0c5460;
+        }
+        
+        .seccion {
+            margin: 40px 0;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+        
+        .espaciado {
+            height: 40px;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 10px,
+                #ffebee 10px,
+                #ffebee 20px
+            );
+            margin: 10px;
+            border: 2px dashed #e74c3c;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Ejercicio 6: Posicionamiento Static y Relative</h1>
+        
+        <div class="info">
+            <h3>📌 Conceptos importantes:</h3>
+            <p><code>position: static</code> → Posición por defecto, flujo normal del documento</p>
+            <p><code>position: relative</code> → Se desplaza DESDE su posición original, pero RESERVA el espacio</p>
+            <p><strong>Propiedades de desplazamiento:</strong> top, right, bottom, left</p>
+        </div>
+        
+        <div class="seccion">
+            <h2>Ejemplo con position: static (gris)</h2>
+            <div class="caja-static">
+                <strong>STATIC</strong>
+                <p>Posición normal</p>
+                <p>No se puede mover con top/left</p>
+            </div>
+        </div>
+        
+        <div class="seccion">
+            <h2>Ejemplo con position: relative (rojo)</h2>
+            <p>La caja roja tiene <code>top: 30px</code> y <code>left: 50px</code></p>
+            
+            <div class="caja-relative">
+                <strong>RELATIVE</strong>
+                <p>top: 30px</p>
+                <p>left: 50px</p>
+            </div>
+            
+            <div class="espaciado">
+                ← Espacio reservado por la caja relative →
+            </div>
+            
+            <div class="caja-normal">
+                <strong>Caja siguiente</strong>
+                <p>Respeta el espacio ORIGINAL de la caja relative</p>
+            </div>
+        </div>
+        
+        <div class="info">
+            <h3>✅ Resultado esperado:</h3>
+            <p>✓ La caja gris permanece en su posición normal</p>
+            <p>✓ La caja roja se desplaza 30px abajo y 50px a la derecha DESDE su posición original</p>
+            <p>✓ La caja roja RESERVA su espacio original (por eso hay un hueco)</p>
+            <p>✓ La caja azul respeta el espacio original de la caja roja</p>
+        </div>
+    </div>
+</body>
+</html>

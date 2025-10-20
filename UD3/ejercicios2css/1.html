@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Modelo de Cajas Básico</title>
+    <style>
+        /*
+        ╔════════════════════════════════════════════════════════════════════╗
+        ║  EJERCICIO 1: MODELO DE CAJAS BÁSICO                              ║
+        ╠════════════════════════════════════════════════════════════════════╣
+        ║                                                                    ║
+        ║  ENUNCIADO:                                                        ║
+        ║  ----------                                                        ║
+        ║  Aplica los siguientes estilos a la caja con clase "caja":        ║
+        ║                                                                    ║
+        ║  1. Ancho de 300px                                                 ║
+        ║  2. Alto de 200px                                                  ║
+        ║  3. Color de fondo azul claro (#87CEEB)                           ║
+        ║  4. Padding de 20px en todos los lados                            ║
+        ║  5. Margin de 30px en todos los lados                             ║
+        ║  6. Borde sólido de 5px de color azul oscuro (#4682B4)            ║
+        ║                                                                    ║
+        ║  OBJETIVO: Entender cómo padding, margin y border afectan al      ║
+        ║            tamaño total de una caja                               ║
+        ║                                                                    ║
+        ╚════════════════════════════════════════════════════════════════════╝
+        */
+        
+        /* Reset básico */
+        body {
+
+        }
+        
+        /* SOLUCIÓN - Elimina o comenta esta parte para dar el ejercicio */
+        .caja {
+
+        }
+        
+        /* Estilos informativos (NO MODIFICAR) */
+        .info {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+        }
+        
+        .info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 1: Modelo de Cajas Básico</h1>
+    
+    <div class="caja">
+        <p>Esta es una caja con contenido.</p>
+        <p>Observa cómo el padding, margin y border afectan su tamaño total.</p>
+    </div>
+    
+    <div class="info">
+        <h3>📏 Información del Modelo de Cajas:</h3>
+        <p><strong>Ancho total =</strong> width + padding-left + padding-right + border-left + border-right</p>
+        <p><strong>En este caso:</strong> 300px + 20px + 20px + 5px + 5px = <strong>350px</strong></p>
+        <p><strong>Alto total =</strong> height + padding-top + padding-bottom + border-top + border-bottom</p>
+        <p><strong>En este caso:</strong> 200px + 20px + 20px + 5px + 5px = <strong>250px</strong></p>
+        <p><strong>Espacio ocupado (con margin):</strong> 350px + 30px + 30px = <strong>410px</strong> de ancho</p>
+    </div>
+</body>
+</html>

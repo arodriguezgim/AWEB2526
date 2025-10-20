@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 - Centrar Elementos con Margin Auto</title>
+    <style>
+        /*
+        ╔════════════════════════════════════════════════════════════════════╗
+        ║  EJERCICIO 5: CENTRAR ELEMENTOS CON MARGIN AUTO                   ║
+        ╠════════════════════════════════════════════════════════════════════╣
+        ║                                                                    ║
+        ║  ENUNCIADO:                                                        ║
+        ║  ----------                                                        ║
+        ║  Aprende a centrar elementos horizontalmente usando margin auto.  ║
+        ║                                                                    ║
+        ║  Para .contenedor:                                                ║
+        ║  1. width: 900px                                                   ║
+        ║  2. margin-left: auto                                             ║
+        ║  3. margin-right: auto                                            ║
+        ║  4. background: white                                             ║
+        ║  5. padding: 30px                                                  ║
+        ║  6. box-shadow: 0 0 20px rgba(0,0,0,0.1)                         ║
+        ║                                                                    ║
+        ║  Para .caja-centrada:                                             ║
+        ║  1. width: 300px                                                   ║
+        ║  2. margin: 20px auto (centra horizontalmente)                    ║
+        ║  3. padding: 20px                                                  ║
+        ║  4. background: #3498db                                           ║
+        ║  5. color: white                                                  ║
+        ║  6. border-radius: 8px                                            ║
+        ║  7. text-align: center                                            ║
+        ║                                                                    ║
+        ║  Para .caja-izquierda:                                            ║
+        ║  1. width: 300px                                                   ║
+        ║  2. margin-left: 0                                                ║
+        ║  3. margin-right: auto                                            ║
+        ║  4. margin-top: 20px                                              ║
+        ║  5. margin-bottom: 20px                                           ║
+        ║  6. padding: 20px                                                  ║
+        ║  7. background: #e74c3c                                           ║
+        ║  8. color: white                                                  ║
+        ║  9. border-radius: 8px                                            ║
+        ║                                                                    ║
+        ║  Para .caja-derecha:                                              ║
+        ║  1. width: 300px                                                   ║
+        ║  2. margin-left: auto                                             ║
+        ║  3. margin-right: 0                                               ║
+        ║  4. margin-top: 20px                                              ║
+        ║  5. margin-bottom: 20px                                           ║
+        ║  6. padding: 20px                                                  ║
+        ║  7. background: #27ae60                                           ║
+        ║  8. color: white                                                  ║
+        ║  9. border-radius: 8px                                            ║
+        ║  10. text-align: right                                            ║
+        ║                                                                    ║
+        ║  OBJETIVO: Dominar el uso de margin auto para alineación          ║
+        ║                                                                    ║
+        ╚════════════════════════════════════════════════════════════════════╝
+        */
+        
+        /* Reset básico */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            margin: 0;
+        }
+        
+        /* TU CÓDIGO AQUÍ */
+        .contenedor {
+            /* Completa según el enunciado */
+        }
+        
+        .caja-centrada {
+            /* Completa según el enunciado */
+        }
+        
+        .caja-izquierda {
+            /* Completa según el enunciado */
+        }
+        
+        .caja-derecha {
+            /* Completa según el enunciado */
+        }
+        
+        /* Estilos auxiliares (NO MODIFICAR) */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 0;
+        }
+        
+        .info {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-left: 4px solid #ffc107;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        
+        .info h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Ejercicio 5: Centrar Elementos con Margin Auto</h1>
+        
+        <div class="info">
+            <h3>💡 Técnica de centrado con margin:</h3>
+            <p><code>margin: 0 auto</code> → Centra horizontalmente (0 arriba/abajo, auto izq/der)</p>
+            <p><code>margin-left: auto</code> → Empuja el elemento a la derecha</p>
+            <p><code>margin-right: auto</code> → Empuja el elemento a la izquierda</p>
+            <p><strong>Nota:</strong> Solo funciona con elementos de bloque que tengan un ancho definido</p>
+        </div>
+        
+        <div class="caja-izquierda">
+            <h2>Alineada a la izquierda</h2>
+            <p>margin-left: 0</p>
+            <p>margin-right: auto</p>
+        </div>
+        
+        <div class="caja-centrada">
+            <h2>Centrada</h2>
+            <p>margin: 20px auto</p>
+        </div>
+        
+        <div class="caja-derecha">
+            <h2>Alineada a la derecha</h2>
+            <p>margin-left: auto</p>
+            <p>margin-right: 0</p>
+        </div>
+        
+        <div class="info">
+            <h3>✅ Resultado esperado:</h3>
+            <p>✓ Contenedor principal centrado en la página</p>
+            <p>✓ Caja roja alineada a la izquierda</p>
+            <p>✓ Caja azul centrada perfectamente</p>
+            <p>✓ Caja verde alineada a la derecha</p>
+        </div>
+    </div>
+</body>
+</html>

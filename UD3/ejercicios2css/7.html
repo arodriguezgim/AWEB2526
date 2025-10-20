@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7 - Posicionamiento Absolute</title>
+    <style>
+        /*
+        ╔════════════════════════════════════════════════════════════════════╗
+        ║  EJERCICIO 7: POSICIONAMIENTO ABSOLUTE                            ║
+        ╠════════════════════════════════════════════════════════════════════╣
+        ║                                                                    ║
+        ║  ENUNCIADO:                                                        ║
+        ║  ----------                                                        ║
+        ║  Crea una tarjeta con elementos posicionados de forma absoluta    ║
+        ║  dentro de un contenedor con position: relative.                  ║
+        ║                                                                    ║
+        ║  Para .tarjeta:                                                    ║
+        ║  1. position: relative (referencia para absolute)                 ║
+        ║  2. width: 400px                                                   ║
+        ║  3. height: 300px                                                  ║
+        ║  4. background: white                                             ║
+        ║  5. margin: 50px auto                                             ║
+        ║  6. border-radius: 10px                                           ║
+        ║  7. box-shadow: 0 5px 20px rgba(0,0,0,0.2)                       ║
+        ║  8. overflow: hidden                                              ║
+        ║                                                                    ║
+        ║  Para .badge:                                                      ║
+        ║  1. position: absolute                                            ║
+        ║  2. top: 20px                                                      ║
+        ║  3. right: 20px                                                    ║
+        ║  4. background: #e74c3c                                           ║
+        ║  5. color: white                                                  ║
+        ║  6. padding: 8px 15px                                             ║
+        ║  7. border-radius: 20px                                           ║
+        ║  8. font-size: 12px                                               ║
+        ║  9. font-weight: bold                                             ║
+        ║                                                                    ║
+        ║  Para .precio:                                                     ║
+        ║  1. position: absolute                                            ║
+        ║  2. bottom: 20px                                                   ║
+        ║  3. left: 20px                                                     ║
+        ║  4. background: #27ae60                                           ║
+        ║  5. color: white                                                  ║
+        ║  6. padding: 10px 20px                                            ║
+        ║  7. border-radius: 5px                                            ║
+        ║  8. font-size: 24px                                               ║
+        ║  9. font-weight: bold                                             ║
+        ║                                                                    ║
+        ║  Para .icono-esquina:                                             ║
+        ║  1. position: absolute                                            ║
+        ║  2. top: 0                                                         ║
+        ║  3. left: 0                                                        ║
+        ║  4. background: #3498db                                           ║
+        ║  5. color: white                                                  ║
+        ║  6. width: 60px                                                    ║
+        ║  7. height: 60px                                                   ║
+        ║  8. display: flex                                                  ║
+        ║  9. align-items: center                                           ║
+        ║  10. justify-content: center                                      ║
+        ║  11. font-size: 28px                                              ║
+        ║  12. border-bottom-right-radius: 10px                             ║
+        ║                                                                    ║
+        ║  OBJETIVO: Dominar position absolute y su relación con            ║
+        ║            el contenedor position relative                        ║
+        ║                                                                    ║
+        ╚════════════════════════════════════════════════════════════════════╝
+        */
+        
+        /* Reset básico */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            margin: 0;
+            min-height: 100vh;
+        }
+        
+        /* TU CÓDIGO AQUÍ */
+        .tarjeta {
+            /* Completa según el enunciado */
+        }
+        
+        .badge {
+            /* Completa según el enunciado */
+        }
+        
+        .precio {
+            /* Completa según el enunciado */
+        }
+        
+        .icono-esquina {
+            /* Completa según el enunciado */
+        }
+        
+        /* Estilos auxiliares (NO MODIFICAR) */
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .contenido {
+            padding: 80px 30px 30px 30px;
+        }
+        
+        .contenido h2 {
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+        
+        .contenido p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .info {
+            background-color: white;
+            padding: 20px;
+            border-left: 4px solid #ffc107;
+            margin: 30px auto;
+            border-radius: 4px;
+            max-width: 600px;
+        }
+        
+        .info h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+        
+        .demo-adicional {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            background: #ecf0f1;
+            margin: 30px auto;
+            border: 2px dashed #95a5a6;
+            border-radius: 8px;
+        }
+        
+        .caja-absoluta {
+            position: absolute;
+            background: #9b59b6;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .top-left {
+            top: 10px;
+            left: 10px;
+        }
+        
+        .top-right {
+            top: 10px;
+            right: 10px;
+        }
+        
+        .bottom-left {
+            bottom: 10px;
+            left: 10px;
+        }
+        
+        .bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+        
+        .center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 7: Posicionamiento Absolute</h1>
+    
+    <div class="info">
+        <h3>📌 Conceptos importantes:</h3>
+        <p><code>position: absolute</code> → Se posiciona relativo al ancestro posicionado más cercano (relative, absolute, fixed)</p>
+        <p><strong>¡IMPORTANTE!</strong> El elemento absolute sale del flujo normal (no reserva espacio)</p>
+        <p><strong>Patrón común:</strong> Padre con <code>position: relative</code>, hijo con <code>position: absolute</code></p>
+    </div>
+    
+    <!-- Tarjeta principal -->
+    <div class="tarjeta">
+        <div class="icono-esquina">⭐</div>
+        <div class="badge">NUEVO</div>
+        
+        <div class="contenido">
+            <h2>Producto Premium</h2>
+            <p>Esta tarjeta tiene elementos posicionados de forma absoluta en diferentes esquinas.</p>
+            <p>Observa cómo se posicionan relativo a la tarjeta (que tiene position: relative).</p>
+        </div>
+        
+        <div class="precio">49,99€</div>
+    </div>
+    
+    <!-- Demostración adicional -->
+    <div class="demo-adicional">
+        <div class="caja-absoluta top-left">top: 10px<br>left: 10px</div>
+        <div class="caja-absoluta top-right">top: 10px<br>right: 10px</div>
+        <div class="caja-absoluta bottom-left">bottom: 10px<br>left: 10px</div>
+        <div class="caja-absoluta bottom-right">bottom: 10px<br>right: 10px</div>
+        <div class="caja-absoluta center">Centrado<br>con transform</div>
+    </div>
+    
+    <div class="info">
+        <h3>✅ Resultado esperado:</h3>
+        <p>✓ Icono de estrella en la esquina superior izquierda</p>
+        <p>✓ Badge "NUEVO" en la esquina superior derecha</p>
+        <p>✓ Precio en la esquina inferior izquierda</p>
+        <p>✓ Todos los elementos absolute se posicionan relativo a .tarjeta</p>
+        <p>✓ Demo adicional muestra las 4 esquinas + centro</p>
+    </div>
+</body>
+</html>
