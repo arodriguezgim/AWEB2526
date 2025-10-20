@@ -2,135 +2,54 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 3 - Padding y Margin Individuales</title>
+    <title>Ejercicio 3 - Display Block vs Inline</title>
     <style>
         /*
-        ╔════════════════════════════════════════════════════════════════════╗
-        ║  EJERCICIO 3: PADDING Y MARGIN INDIVIDUALES                       ║
-        ╠════════════════════════════════════════════════════════════════════╣
-        ║                                                                    ║
-        ║  ENUNCIADO:                                                        ║
-        ║  ----------                                                        ║
-        ║  Crea una tarjeta con espaciados personalizados usando            ║
-        ║  propiedades individuales de padding y margin.                    ║
-        ║                                                                    ║
-        ║  Para .tarjeta:                                                    ║
-        ║  1. Ancho: 350px                                                   ║
-        ║  2. Fondo: blanco (#ffffff)                                       ║
-        ║  3. Borde: 1px solid #ddd                                         ║
-        ║  4. Bordes redondeados: 8px                                       ║
-        ║  5. box-sizing: border-box                                        ║
-        ║  6. Sombra: 0 2px 10px rgba(0,0,0,0.1)                           ║
-        ║                                                                    ║
-        ║  Para .tarjeta-header:                                            ║
-        ║  1. Fondo: #3498db                                                ║
-        ║  2. Color: blanco                                                 ║
-        ║  3. padding-top: 20px                                             ║
-        ║  4. padding-bottom: 20px                                          ║
-        ║  5. padding-left: 30px                                            ║
-        ║  6. padding-right: 30px                                           ║
-        ║                                                                    ║
-        ║  Para .tarjeta-body:                                              ║
-        ║  1. padding-top: 25px                                             ║
-        ║  2. padding-bottom: 25px                                          ║
-        ║  3. padding-left: 30px                                            ║
-        ║  4. padding-right: 30px                                           ║
-        ║                                                                    ║
-        ║  Para .tarjeta-footer:                                            ║
-        ║  1. Fondo: #f8f9fa                                                ║
-        ║  2. padding-top: 15px                                             ║
-        ║  3. padding-bottom: 15px                                          ║
-        ║  4. padding-left: 30px                                            ║
-        ║  5. padding-right: 30px                                           ║
-        ║  6. Borde superior: 1px solid #ddd                                ║
-        ║                                                                    ║
-        ║  OBJETIVO: Dominar el uso de padding y margin individuales        ║
-        ║                                                                    ║
-        ╚════════════════════════════════════════════════════════════════════╝
+        EJERCICIO 3: DISPLAY BLOCK VS INLINE
+        
+        Instrucciones:
+        1. Dale a .elemento-block un display: block
+        2. Añade width de 200px, padding de 10px, margin de 5px
+        3. Fondo #3498db y color white
+        4. Dale a .elemento-inline un display: inline
+        5. Añade padding de 10px y background-color #e74c3c
+        6. Observa que inline NO acepta width/height ni margin vertical
+        7. Dale a .elemento-inline-block un display: inline-block
+        8. Añade width 150px, height 50px, padding 10px, margin 5px
+        9. Fondo #2ecc71 y color white
         */
         
-        /* Reset básico */
+        /* SOLUCIÓN */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            padding: 40px;
+            
         }
         
-        h1, h2, h3, p {
-            margin: 0;
+        .elemento-block {
+        
         }
         
-        /* TU CÓDIGO AQUÍ */
-        .tarjeta {
-            /* Completa según el enunciado */
+        .elemento-inline {
+       
         }
         
-        .tarjeta-header {
-            /* Completa según el enunciado */
-        }
-        
-        .tarjeta-body {
-            /* Completa según el enunciado */
-        }
-        
-        .tarjeta-footer {
-            /* Completa según el enunciado */
-        }
-        
-        /* Estilos adicionales (NO MODIFICAR) */
-        .info {
-            background-color: #fff;
-            padding: 15px;
-            border-left: 4px solid #f39c12;
-            margin: 20px 0;
-            max-width: 600px;
-        }
-        
-        .btn {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: #2980b9;
+        .elemento-inline-block {
+     
         }
     </style>
 </head>
 <body>
-    <h1>Ejercicio 3: Padding y Margin Individuales</h1>
+    <h2>Elementos Block (ocupan todo el ancho)</h2>
+    <div class="elemento-block">Block 1</div>
+    <div class="elemento-block">Block 2</div>
     
-    <div class="info">
-        <h3>💡 Recuerda:</h3>
-        <p><strong>Orden de las propiedades individuales:</strong></p>
-        <p>padding-top, padding-right, padding-bottom, padding-left (sentido horario)</p>
-        <p><strong>Shorthand:</strong> padding: top right bottom left;</p>
-    </div>
+    <h2>Elementos Inline (en línea)</h2>
+    <span class="elemento-inline">Inline 1</span>
+    <span class="elemento-inline">Inline 2</span>
+    <span class="elemento-inline">Inline 3</span>
     
-    <div class="tarjeta">
-        <div class="tarjeta-header">
-            <h2>Título de la Tarjeta</h2>
-        </div>
-        <div class="tarjeta-body">
-            <h3>Subtítulo</h3>
-            <p>Este es el contenido de la tarjeta. Observa cómo el padding controla el espacio interno de cada sección.</p>
-            <p style="margin-top: 15px;">El padding es diferente en cada sección para crear una jerarquía visual.</p>
-        </div>
-        <div class="tarjeta-footer">
-            <button class="btn">Acción</button>
-        </div>
-    </div>
-    
-    <div class="info" style="margin-top: 30px;">
-        <h3>✅ Resultado esperado:</h3>
-        <p>✓ Header con fondo azul y padding 20px arriba/abajo, 30px izq/der</p>
-        <p>✓ Body con padding 25px arriba/abajo, 30px izq/der</p>
-        <p>✓ Footer con fondo gris claro y padding 15px arriba/abajo, 30px izq/der</p>
-        <p>✓ Tarjeta con ancho total de 350px (incluyendo border gracias a border-box)</p>
-    </div>
+    <h2>Elementos Inline-Block (lo mejor de ambos)</h2>
+    <div class="elemento-inline-block">IB 1</div>
+    <div class="elemento-inline-block">IB 2</div>
+    <div class="elemento-inline-block">IB 3</div>
 </body>
 </html>
