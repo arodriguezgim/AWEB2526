@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4 - Carrito de Compra</title>
+    <style>
+        /*
+        EJERCICIO 4: CARRITO DE COMPRA CON RESUMEN
+        
+        Instrucciones:
+        1. Dale a .contenedor-carrito max-width: 1100px y margin: 0 auto
+        
+        2. Dale a .productos-carrito display: inline-block
+        3. Width: 62%, vertical-align: top
+        4. Margin-right: 3%
+        
+        5. Dale a .item-producto background-color: white
+        6. Padding: 20px, margin-bottom: 15px
+        7. Border-radius: 10px, box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+        
+        8. Dale a .imagen-producto display: inline-block
+        9. Width: 100px, height: 100px
+        10. Background-color: #e9ecef, border-radius: 8px
+        11. Margin-right: 20px, vertical-align: top
+        
+        12. Dale a .info-producto display: inline-block
+        13. Width: 50%, vertical-align: top
+        
+        14. Dale a .controles-producto display: inline-block
+        15. Width: 20%, text-align: right
+        16. Vertical-align: top, position: relative
+        
+        17. Dale a .boton-eliminar position: absolute
+        18. Top: 0, right: 0
+        19. Width: 30px, height: 30px
+        20. Background-color: #fee, border: none
+        21. Border-radius: 50%, cursor: pointer
+        22. Color: #e74c3c
+        
+        23. Dale a .selector-cantidad display: inline-block
+        24. Width: 40px, padding: 8px
+        25. Border: 2px solid #e0e0e0, border-radius: 6px
+        26. Text-align: center
+        
+        27. Dale a .resumen-carrito display: inline-block
+        28. Width: 32%, vertical-align: top
+        29. Background-color: white, border-radius: 10px
+        30. Padding: 25px, box-sizing: border-box
+        31. Box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+        32. Position: sticky, top: 20px (se queda fijo al hacer scroll)
+        
+        33. Dale a .linea-resumen padding: 15px 0
+        34. Border-bottom: 1px solid #ecf0f1
+        35. Display: flex, justify-content: space-between
+        
+        36. Dale a .total-resumen font-size: 20px
+        37. Font-weight: bold, color: #2c3e50
+        
+        38. Dale a .boton-pagar width: 100%
+        39. Padding: 15px, background con linear-gradient
+        40. Color: white, border: none, border-radius: 8px
+        41. Font-weight: bold, cursor: pointer
+        */
+
+        /* SOLUCIÓN */
+        
+    </style>
+</head>
+
+<body>
+    <h1>🛒 Mi Carrito de Compra</h1>
+
+    <div class="contenedor-carrito">
+        <!-- Productos -->
+        <div class="productos-carrito">
+            <div class="item-producto">
+                <div class="imagen-producto">💻</div>
+                <div class="info-producto">
+                    <div class="nombre-producto">Laptop Pro 15"</div>
+                    <div class="descripcion-producto">Procesador Intel i7, 16GB RAM, 512GB SSD</div>
+                    <div class="precio-producto">€1,299.00</div>
+                </div>
+                <div class="controles-producto">
+                    <button class="boton-eliminar">✕</button>
+                    <div class="cantidad-container">
+                        <label class="label-cantidad">Cantidad:</label>
+                        <input type="number" class="selector-cantidad" value="1" min="1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-producto">
+                <div class="imagen-producto">🖱️</div>
+                <div class="info-producto">
+                    <div class="nombre-producto">Ratón Inalámbrico</div>
+                    <div class="descripcion-producto">Ergonómico, 6 botones programables</div>
+                    <div class="precio-producto">€49.99</div>
+                </div>
+                <div class="controles-producto">
+                    <button class="boton-eliminar">✕</button>
+                    <div class="cantidad-container">
+                        <label class="label-cantidad">Cantidad:</label>
+                        <input type="number" class="selector-cantidad" value="2" min="1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-producto">
+                <div class="imagen-producto">⌨️</div>
+                <div class="info-producto">
+                    <div class="nombre-producto">Teclado Mecánico RGB</div>
+                    <div class="descripcion-producto">Switches azules, retroiluminación completa</div>
+                    <div class="precio-producto">€129.99</div>
+                </div>
+                <div class="controles-producto">
+                    <button class="boton-eliminar">✕</button>
+                    <div class="cantidad-container">
+                        <label class="label-cantidad">Cantidad:</label>
+                        <input type="number" class="selector-cantidad" value="1" min="1">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resumen -->
+        <aside class="resumen-carrito">
+            <h3 class="titulo-resumen">Resumen del Pedido</h3>
+
+            <div class="linea-resumen">
+                <span class="label-resumen">Subtotal (4 artículos)</span>
+                <span class="valor-resumen">€1,528.97</span>
+            </div>
+
+            <div class="linea-resumen">
+                <span class="label-resumen">Envío</span>
+                <span class="valor-resumen">€15.00</span>
+            </div>
+
+            <div class="linea-resumen">
+                <span class="label-resumen">IVA (21%)</span>
+                <span class="valor-resumen">€321.08</span>
+            </div>
+
+            <div class="linea-resumen">
+                <span class="label-resumen total-resumen">Total</span>
+                <span class="valor-resumen total-resumen">€1,865.05</span>
+            </div>
+
+            <div class="codigo-descuento">
+                <input type="text" placeholder="Código de descuento">
+                <button class="boton-aplicar">Aplicar</button>
+            </div>
+
+            <button class="boton-pagar">Proceder al Pago</button>
+        </aside>
+    </div>
+</body>
+
+</html>

@@ -13,6 +13,8 @@
 - [UD3 - Hojas de Estilos. CSS. - 17h](./UD3/readme.md)
     - [Ejercicios CSS](./UD3/ejercicios1css/readme.md)
     - [Ejercicios CSS parte 2](./UD3/ejercicios2css/readme.md)
+    - [Ejercicios CSS parte 3](./UD3/ejercicios3css/readme.md)
+    - [Ejercicios CSS parte 4](./UD3/ejercicios4css/readme.md)
 - UD4 - Lenguajes de Script: Javascript. - 22h
 - UD5 - Diseño Web con frameworks. Bootstrap / Tailwind. - 15h
 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 - Perfil de Usuario con Edición</title>
+    <style>
+        /*
+        EJERCICIO 3: PERFIL DE USUARIO CON FORMULARIO DE EDICIÓN
+
+        Instrucciones:
+        1. Dale a .contenedor-perfil max-width: 900px y margin: 0 auto
+        
+        2. Dale a .sidebar-perfil display: inline-block
+        3. Width: 28%, margin-right: 2%
+        4. Background-color: white, border-radius: 12px
+        5. Box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+        6. Padding: 30px 0, box-sizing: border-box
+        7. Vertical-align: top (para alinear con el contenido)
+        
+        8. Dale a .foto-perfil-grande width: 120px y height: 120px
+        9. Border-radius: 50% para hacerla circular
+        10. Background con linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+        11. Margin: 0 auto 20px auto para centrarla
+        12. Display: flex, align-items: center, justify-content: center
+        
+        13. Dale a .menu-perfil list-style: none
+        14. Padding: 0 y margin: 20px 0 0 0
+        
+        15. Dale a .menu-perfil li padding: 15px 30px
+        16. Border-left: 3px solid transparent
+        17. Cursor: pointer
+        
+        18. Dale a .menu-perfil li.activo background-color: #e8eaf6
+        19. Border-left-color: #667eea
+        20. Color: #667eea y font-weight: bold
+        
+        21. Dale a .contenido-perfil display: inline-block
+        22. Width: 70%, background-color: white
+        23. Border-radius: 12px, box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+        24. Padding: 40px, box-sizing: border-box
+        25. Vertical-align: top
+        
+        26. Dale a .campo-formulario display: inline-block
+        27. Width: 48%, margin-right: 4%
+        28. Box-sizing: border-box, vertical-align: top
+        29. Usa .campo-formulario:nth-child(2n) con margin-right: 0
+        
+        30. Dale a .campo-formulario input y textarea width: 100%
+        31. Padding: 12px 15px, border: 2px solid #e0e0e0
+        32. Border-radius: 8px, box-sizing: border-box
+        
+        33. Dale a .campo-formulario textarea height: 120px
+        34. Resize: vertical (permite redimensionar verticalmente)
+        
+        35. Dale a .boton-cancelar float: left
+        36. Padding: 12px 30px, background-color: #ecf0f1
+        37. Border: none, border-radius: 8px
+        
+        38. Dale a .boton-guardar float: right
+        39. Mismo padding, background con linear-gradient
+        40. Color: white, border: none, border-radius: 8px
+        */
+
+        /* SOLUCIÓN */
+        
+    </style>
+</head>
+
+<body>
+    <div class="contenedor-perfil">
+        <!-- Sidebar Izquierda -->
+        <aside class="sidebar-perfil">
+            <div class="foto-perfil-grande">👤</div>
+            <div class="info-usuario">
+                <div class="nombre-usuario">María González</div>
+                <div class="cargo-usuario">Desarrolladora Web</div>
+            </div>
+
+            <ul class="menu-perfil">
+                <li class="activo"><span>✏️</span> Editar Perfil</li>
+                <li><span>🔒</span> Seguridad</li>
+                <li><span>🔔</span> Notificaciones</li>
+                <li><span>⚙️</span> Configuración</li>
+                <li><span>❓</span> Ayuda</li>
+            </ul>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="contenido-perfil">
+            <h2 class="titulo-seccion">Editar Perfil</h2>
+
+            <form>
+                <div class="fila-formulario">
+                    <div class="campo-formulario">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" value="María" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="apellidos">Apellidos *</label>
+                        <input type="text" id="apellidos" name="apellidos" value="González" required>
+                    </div>
+                </div>
+
+                <div class="fila-formulario">
+                    <div class="campo-formulario">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" value="maria@email.com" required>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" value="+34 600 123 456">
+                    </div>
+                </div>
+
+                <div class="fila-formulario">
+                    <div class="campo-formulario">
+                        <label for="cargo">Cargo</label>
+                        <input type="text" id="cargo" name="cargo" value="Desarrolladora Web">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa" value="Tech Company">
+                    </div>
+                </div>
+
+                <div class="fila-formulario">
+                    <div class="campo-formulario campo-completo">
+                        <label for="biografia">Biografía</label>
+                        <textarea id="biografia"
+                            name="biografia">Desarrolladora web con más de 5 años de experiencia en tecnologías front-end y back-end. Apasionada por crear experiencias de usuario excepcionales.</textarea>
+                    </div>
+                </div>
+
+                <div class="fila-formulario">
+                    <div class="campo-formulario">
+                        <label for="linkedin">LinkedIn</label>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/...">
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="github">GitHub</label>
+                        <input type="url" id="github" name="github" placeholder="https://github.com/...">
+                    </div>
+                </div>
+
+                <div class="botones-formulario clearfix">
+                    <button type="button" class="boton-cancelar">Cancelar</button>
+                    <button type="submit" class="boton-guardar">Guardar Cambios</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>

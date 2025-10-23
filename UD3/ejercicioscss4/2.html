@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2 - Panel de Notificaciones</title>
+    <style>
+        /*
+        EJERCICIO 2: PANEL DE NOTIFICACIONES
+        
+        Crea un panel lateral de notificaciones que:
+        - Se quede pegado en la esquina superior derecha siempre visible
+        - Tenga un ancho de 320px
+        - Esté separado 20px del borde superior y derecho
+        - Cada notificación debe tener una caja con fondo blanco
+        - Las notificaciones deben tener espacio interno de 15px
+        - Debe haber separación entre cada notificación
+        - Añade esquinas redondeadas a las cajas
+        - Incluye una pequeña marca (punto de color) a la izquierda 
+          que se posicione de forma absoluta dentro de cada notificación
+        - El panel debe estar por encima de todo el contenido
+        */
+
+        /* SOLUCIÓN */
+        
+    </style>
+</head>
+
+<body>
+    <div class="panel-notificaciones">
+        <div class="notificacion">
+            <div class="marca marca-info"></div>
+            <div class="titulo-notif">Nueva actualización</div>
+            <p class="texto-notif">El sistema se actualizará en 5 minutos</p>
+        </div>
+
+        <div class="notificacion">
+            <div class="marca marca-exito"></div>
+            <div class="titulo-notif">Tarea completada</div>
+            <p class="texto-notif">Tu informe ha sido enviado correctamente</p>
+        </div>
+
+        <div class="notificacion">
+            <div class="marca marca-alerta"></div>
+            <div class="titulo-notif">Atención requerida</div>
+            <p class="texto-notif">Tienes 3 mensajes sin leer</p>
+        </div>
+
+        <div class="notificacion">
+            <div class="marca marca-error"></div>
+            <div class="titulo-notif">Error de conexión</div>
+            <p class="texto-notif">No se pudo conectar con el servidor</p>
+        </div>
+    </div>
+
+    <div class="contenido-principal">
+        <h1>Contenido Principal</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+</body>
+
+</html>

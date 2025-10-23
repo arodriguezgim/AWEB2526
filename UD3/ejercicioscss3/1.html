@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1 - Formulario de Login</title>
+    <style>
+        /*
+        EJERCICIO 1: FORMULARIO DE LOGIN CENTRADO
+        
+        Instrucciones:
+        1. Dale a body un margin: 0 y padding: 0
+        2. Aplica un background con linear-gradient de #667eea a #764ba2
+        3. Usa min-height: 100vh para ocupar toda la pantalla
+        4. Usa display: flex, align-items: center y justify-content: center para centrar
+        
+        5. Dale a .contenedor-login position: relative
+        6. Width de 400px y background-color: white
+        7. Border-radius: 15px y box-shadow: 0 15px 35px rgba(0,0,0,0.3)
+        8. Padding: 80px 40px 40px 40px (más arriba para el icono)
+        
+        9. Dale a .icono-usuario position: absolute
+        10. Posiciónalo con top: -50px y left: 50%
+        11. Usa transform: translateX(-50%) para centrarlo perfectamente
+        12. Width y height de 100px, border-radius: 50% (círculo)
+        13. Background con linear-gradient igual que el body
+        14. Border: 4px solid white
+        
+        15. Dale a todos los input width: 100%
+        16. Padding: 12px 15px y border: 2px solid #e0e0e0
+        17. Border-radius: 8px y box-sizing: border-box
+        18. En input:focus cambia border-color: #667eea y outline: none
+        
+        19. Dale a .enlace-recuperar display: block y text-align: right
+        20. Color: #667eea y text-decoration: none
+        
+        21. Dale a .boton-login width: 100% y padding: 14px
+        22. Background con linear-gradient igual que antes
+        23. Color: white, border: none, border-radius: 8px
+        24. Font-weight: bold y cursor: pointer
+        */
+
+        /* SOLUCIÓN */
+        
+    </style>
+</head>
+
+<body>
+    <div class="contenedor-login">
+        <div class="icono-usuario">👤</div>
+
+        <h2 class="titulo-login">Iniciar Sesión</h2>
+
+        <form>
+            <div class="grupo-input">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
+
+            <div class="grupo-input">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
+            </div>
+
+            <a href="#" class="enlace-recuperar">¿Olvidaste tu contraseña?</a>
+
+            <button type="submit" class="boton-login">Iniciar Sesión</button>
+
+            <p class="texto-registro">
+                ¿No tienes cuenta? <a href="#">Regístrate aquí</a>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>

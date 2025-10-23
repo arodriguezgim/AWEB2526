@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5 - Formulario de Reserva</title>
+    <style>
+        /*
+        EJERCICIO 5: FORMULARIO DE RESERVA DE HOTEL
+        
+        Instrucciones:
+        1. Dale a body margin: 0, padding: 0
+        2. Background con linear-gradient de #11998e a #38ef7d
+        3. Min-height: 100vh, display: flex
+        4. Align-items: center, justify-content: center
+        
+        5. Dale a .contenedor-reserva max-width: 900px
+        6. Background-color: white, border-radius: 15px
+        7. Box-shadow: 0 10px 40px rgba(0,0,0,0.2)
+        8. Overflow: hidden (para que el banner no sobresalga)
+        
+        9. Dale a .banner-reserva height: 200px
+        10. Background con linear-gradient igual que el body
+        11. Position: relative, display: flex
+        12. Align-items: center, justify-content: center
+        
+        13. Dale a .icono-hotel position: absolute
+        14. Bottom: -40px (para que sobresalga del banner)
+        15. Left: 50%, transform: translateX(-50%)
+        16. Width: 80px, height: 80px
+        17. Background-color: white, border-radius: 50%
+        18. Box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+        
+        19. Dale a .contenido-reserva padding: 60px 40px 40px 40px
+        
+        20. Dale a .seccion-formulario margin-bottom: 30px
+        
+        21. Dale a .fila-campos display: flex
+        22. Gap: 20px (espacio entre campos)
+        23. Margin-bottom: 20px
+        
+        24. Dale a .campo-flex flex: 1 (para que ocupen espacio igual)
+        
+        25. Dale a todos los input, select width: 100%
+        26. Padding: 12px 15px, border: 2px solid #e0e0e0
+        27. Border-radius: 8px, box-sizing: border-box
+        
+        28. Dale a .selector-huespedes display: flex
+        29. Gap: 10px, align-items: center
+        
+        30. Dale a .boton-contador width: 40px, height: 40px
+        31. Border: 2px solid #11998e, background-color: white
+        32. Border-radius: 50%, cursor: pointer
+        33. Color: #11998e, font-size: 20px, font-weight: bold
+        
+        34. Dale a .numero-huespedes padding: 0 20px
+        35. Font-size: 18px, font-weight: bold
+        
+        36. Dale a .resumen-reserva background-color: #f8f9fa
+        37. Padding: 20px, border-radius: 10px
+        38. Border-left: 4px solid #11998e
+        
+        39. Dale a .linea-resumen display: flex
+        40. Justify-content: space-between, padding: 10px 0
+        
+        41. Dale a .boton-reservar width: 100%
+        42. Padding: 15px, background con linear-gradient
+        43. Color: white, border: none, border-radius: 8px
+        44. Font-size: 18px, font-weight: bold, cursor: pointer
+        */
+
+        /* SOLUCIÓN */
+        
+    </style>
+</head>
+
+<body>
+    <div class="contenedor-reserva">
+        <!-- Banner Superior -->
+        <div class="banner-reserva">
+            <h1>🏨 Reserva tu Habitación</h1>
+            <div class="icono-hotel">🏨</div>
+        </div>
+
+        <!-- Contenido del Formulario -->
+        <div class="contenido-reserva">
+            <form>
+                <!-- Fechas -->
+                <div class="seccion-formulario">
+                    <h3 class="titulo-seccion">📅 Fechas de Estancia</h3>
+                    <div class="fila-campos">
+                        <div class="campo-flex">
+                            <label for="fecha-entrada">Fecha de Entrada *</label>
+                            <input type="date" id="fecha-entrada" name="fecha-entrada" required>
+                        </div>
+                        <div class="campo-flex">
+                            <label for="fecha-salida">Fecha de Salida *</label>
+                            <input type="date" id="fecha-salida" name="fecha-salida" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tipo de Habitación -->
+                <div class="seccion-formulario">
+                    <h3 class="titulo-seccion">🛏️ Tipo de Habitación</h3>
+                    <div class="fila-campos">
+                        <div class="campo-flex">
+                            <label for="tipo-habitacion">Selecciona el tipo *</label>
+                            <select id="tipo-habitacion" name="tipo-habitacion" required>
+                                <option value="">Elige una opción</option>
+                                <option value="individual">Individual - €80/noche</option>
+                                <option value="doble">Doble - €120/noche</option>
+                                <option value="suite">Suite - €200/noche</option>
+                                <option value="familiar">Familiar - €150/noche</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Número de Huéspedes -->
+                <div class="seccion-formulario">
+                    <h3 class="titulo-seccion">👥 Número de Huéspedes</h3>
+                    <label class="label-huespedes">Adultos</label>
+                    <div class="selector-huespedes">
+                        <button type="button" class="boton-contador">-</button>
+                        <span class="numero-huespedes">2</span>
+                        <button type="button" class="boton-contador">+</button>
+                    </div>
+
+                    <label class="label-huespedes" style="margin-top: 15px;">Niños</label>
+                    <div class="selector-huespedes">
+                        <button type="button" class="boton-contador">-</button>
+                        <span class="numero-huespedes">0</span>
+                        <button type="button" class="boton-contador">+</button>
+                    </div>
+                </div>
+
+                <!-- Datos Personales -->
+                <div class="seccion-formulario">
+                    <h3 class="titulo-seccion">📝 Datos Personales</h3>
+                    <div class="fila-campos">
+                        <div class="campo-flex">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="campo-flex">
+                            <label for="apellidos">Apellidos *</label>
+                            <input type="text" id="apellidos" name="apellidos" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-campos">
+                        <div class="campo-flex">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="campo-flex">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opciones Extra -->
+                <div class="seccion-formulario">
+                    <h3 class="titulo-seccion">✨ Servicios Adicionales</h3>
+                    <div class="opciones-extra">
+                        <div class="opcion-checkbox">
+                            <input type="checkbox" id="desayuno" name="desayuno">
+                            <label for="desayuno">Desayuno incluido (+€15 por persona/día)</label>
+                        </div>
+                        <div class="opcion-checkbox">
+                            <input type="checkbox" id="parking" name="parking">
+                            <label for="parking">Parking privado (+€10/día)</label>
+                        </div>
+                        <div class="opcion-checkbox">
+                            <input type="checkbox" id="wifi" name="wifi" checked>
+                            <label for="wifi">WiFi Premium (Incluido gratis)</label>
+                        </div>
+                        <div class="opcion-checkbox">
+                            <input type="checkbox" id="spa" name="spa">
+                            <label for="spa">Acceso al SPA (+€25/persona)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resumen -->
+                <div class="resumen-reserva">
+                    <h4 class="titulo-resumen">💰 Resumen de Reserva</h4>
+                    <div class="linea-resumen">
+                        <span>Habitación Doble (3 noches)</span>
+                        <span>€360.00</span>
+                    </div>
+                    <div class="linea-resumen">
+                        <span>Huéspedes (2 adultos)</span>
+                        <span>-</span>
+                    </div>
+                    <div class="linea-resumen">
+                        <span>Servicios adicionales</span>
+                        <span>€0.00</span>
+                    </div>
+                    <div class="linea-resumen total">
+                        <span>Total</span>
+                        <span>€360.00</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="boton-reservar">Confirmar Reserva</button>
+
+                <p class="nota-cancelacion">
+                    ℹ️ Cancelación gratuita hasta 24 horas antes de la llegada
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

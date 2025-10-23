@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5 - Sistema de Pestañas</title>
+    <style>
+        /*
+        EJERCICIO 5: SISTEMA DE PESTAÑAS (TABS)
+        
+        Crea un sistema de pestañas donde:
+        - El contenedor de pestañas debe estar centrado con ancho de 700px
+        - Las cabeceras de las pestañas deben estar en línea horizontal
+        - Cada pestaña debe tener espacio interno cómodo
+        - Las pestañas inactivas tienen fondo gris claro
+        - La pestaña activa tiene fondo blanco y debe sobresalir ligeramente
+        - El contenido de las pestañas tiene fondo blanco
+        - Añade borde alrededor del contenido
+        - Las esquinas superiores de las pestañas activas deben ser redondeadas
+        - El borde inferior de la pestaña activa debe desaparecer 
+          para fusionarse con el contenido
+        - Solo uno de los contenidos debe ser visible (usa la propiedad adecuada)
+        */
+
+        /* SOLUCIÓN */
+        
+    </style>
+</head>
+
+<body>
+    <div class="contenedor-tabs">
+        <div class="cabecera-tabs">
+            <div class="tab activa">Características</div>
+            <div class="tab">Especificaciones</div>
+            <div class="tab">Opiniones</div>
+        </div>
+
+        <div class="contenido-tabs">
+            <div class="panel-tab activo">
+                <h2>Características Principales</h2>
+                <p>Este producto incluye las siguientes características destacadas:</p>
+                <ul class="lista-caracteristicas">
+                    <li>✅ Diseño moderno y elegante</li>
+                    <li>✅ Alta durabilidad y calidad</li>
+                    <li>✅ Fácil de usar e instalar</li>
+                    <li>✅ Garantía de 2 años</li>
+                </ul>
+                <p>Ideal para uso profesional y doméstico.</p>
+            </div>
+
+            <div class="panel-tab">
+                <h2>Especificaciones Técnicas</h2>
+                <p><strong>Dimensiones:</strong> 30cm x 20cm x 10cm</p>
+                <p><strong>Peso:</strong> 2.5 kg</p>
+                <p><strong>Material:</strong> Aluminio anodizado</p>
+                <p><strong>Color:</strong> Gris espacial</p>
+                <p><strong>Consumo:</strong> 45W</p>
+                <p><strong>Voltaje:</strong> 220V - 240V</p>
+            </div>
+
+            <div class="panel-tab">
+                <h2>Opiniones de Clientes</h2>
+                <div style="background-color: #fff3cd; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+                    <p style="margin: 0;"><strong>⭐⭐⭐⭐⭐ María G.</strong></p>
+                    <p style="margin: 10px 0 0 0;">"Excelente producto, superó mis expectativas.
+                        Muy recomendable."</p>
+                </div>
+                <div style="background-color: #fff3cd; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+                    <p style="margin: 0;"><strong>⭐⭐⭐⭐ Carlos P.</strong></p>
+                    <p style="margin: 10px 0 0 0;">"Buena calidad-precio. Llegó en perfecto estado."</p>
+                </div>
+                <div style="background-color: #fff3cd; padding: 15px; border-radius: 5px;">
+                    <p style="margin: 0;"><strong>⭐⭐⭐⭐⭐ Ana L.</strong></p>
+                    <p style="margin: 10px 0 0 0;">"Perfecto, justo lo que buscaba. Volveré a comprar."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 30px; color: #7f8c8d;">
+        <strong>Nota:</strong> En este ejercicio, solo la primera pestaña está visible por defecto.
+        En una implementación real, JavaScript cambiaría la visibilidad al hacer clic.
+    </p>
+</body>
+
+</html>

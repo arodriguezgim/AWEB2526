@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2 - Formulario de Registro con Pasos</title>
+    <style>
+        /*
+        EJERCICIO 2: FORMULARIO DE REGISTRO CON INDICADOR DE PASOS
+
+        Instrucciones:
+        1. Dale a .contenedor-formulario max-width: 700px y margin: 0 auto
+        2. Background-color: white, border-radius: 12px
+        3. Box-shadow: 0 4px 15px rgba(0,0,0,0.1) y padding: 40px
+        
+        4. Dale a .indicador-pasos position: relative
+        5. Display: flex y justify-content: space-between
+        6. Margin-bottom: 50px
+        
+        7. Dale a .linea-pasos position: absolute
+        8. Top: 25px, left: 15%, right: 15%
+        9. Height: 3px, background-color: #e0e0e0
+        10. Z-index: 1 para estar debajo de los círculos
+        
+        11. Dale a .paso position: relative y z-index: 2
+        12. Text-align: center y flex: 1
+        
+        13. Dale a .circulo-paso width: 50px y height: 50px
+        14. Border-radius: 50% (círculo perfecto)
+        15. Background-color: #e0e0e0 y color: #999
+        16. Display: flex, align-items: center, justify-content: center
+        17. Margin: 0 auto 10px auto
+        
+        18. Dale a .paso.activo .circulo-paso un background con linear-gradient
+        19. Background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+        20. Color: white
+        
+        21. Dale a .campo display: inline-block
+        22. Width: 48%, margin-right: 4%
+        23. Box-sizing: border-box y vertical-align: top
+        24. Usa .campo:nth-child(2n) con margin-right: 0 para el segundo elemento
+        
+        25. Dale a .campo input y select width: 100%
+        26. Padding: 12px 15px, border: 2px solid #e0e0e0
+        27. Border-radius: 8px, box-sizing: border-box
+        
+        28. Dale a .boton-anterior float: left
+        29. Padding: 12px 30px, background-color: #ecf0f1
+        30. Border: none, border-radius: 8px, cursor: pointer
+        
+        31. Dale a .boton-siguiente float: right
+        32. Mismo padding que anterior
+        33. Background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+        34. Color: white, border: none, border-radius: 8px
+        */
+
+        /* SOLUCIÓN */
+        
+    </style>
+</head>
+
+<body>
+    <div class="contenedor-formulario">
+        <!-- Indicador de Pasos -->
+        <div class="indicador-pasos">
+            <div class="linea-pasos"></div>
+            <div class="paso completado">
+                <div class="circulo-paso">1</div>
+                <div class="texto-paso">Datos Personales</div>
+            </div>
+            <div class="paso activo">
+                <div class="circulo-paso">2</div>
+                <div class="texto-paso">Información de Contacto</div>
+            </div>
+            <div class="paso">
+                <div class="circulo-paso">3</div>
+                <div class="texto-paso">Confirmación</div>
+            </div>
+        </div>
+
+        <h2 class="titulo-formulario">Paso 2: Información de Contacto</h2>
+
+        <form>
+            <div class="fila-campos">
+                <div class="campo">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+            </div>
+
+            <div class="fila-campos">
+                <div class="campo campo-completo">
+                    <label for="direccion">Dirección *</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+            </div>
+
+            <div class="fila-campos">
+                <div class="campo">
+                    <label for="ciudad">Ciudad *</label>
+                    <input type="text" id="ciudad" name="ciudad" required>
+                </div>
+
+                <div class="campo">
+                    <label for="codigo-postal">Código Postal *</label>
+                    <input type="text" id="codigo-postal" name="codigo-postal" required>
+                </div>
+            </div>
+
+            <div class="fila-campos">
+                <div class="campo">
+                    <label for="provincia">Provincia *</label>
+                    <select id="provincia" name="provincia" required>
+                        <option value="">Selecciona una provincia</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="barcelona">Barcelona</option>
+                        <option value="valencia">Valencia</option>
+                        <option value="sevilla">Sevilla</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="pais">País *</label>
+                    <select id="pais" name="pais" required>
+                        <option value="">Selecciona un país</option>
+                        <option value="espana">España</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="francia">Francia</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grupo-checkbox">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">
+                    Acepto los términos y condiciones y la política de privacidad
+                </label>
+            </div>
+
+            <div class="botones-navegacion clearfix">
+                <button type="button" class="boton-anterior">← Anterior</button>
+                <button type="submit" class="boton-siguiente">Siguiente →</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

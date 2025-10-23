@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7 - Formulario de Contacto</title>
+    <style>
+        /*
+        EJERCICIO 7: FORMULARIO DE CONTACTO ESTILIZADO
+        
+        Crea un formulario de contacto profesional donde:
+        - El formulario debe estar centrado con ancho máximo de 600px
+        - Debe tener fondo blanco con sombra para destacar del fondo
+        - La cabecera del formulario tiene un fondo de color diferente
+        - Cada campo debe ocupar todo el ancho disponible
+        - Los campos de texto deben tener espacio interno cómodo
+        - Añade espacio entre cada campo
+        - Los labels deben aparecer encima de los campos
+        - El textarea (área de texto) debe ser más alto que los inputs
+        - El botón de envío debe destacar con color llamativo
+        - Incluye un contador de caracteres en la esquina inferior 
+          derecha del textarea (posicionado de forma absoluta)
+        - Los campos deben tener bordes redondeados
+        */
+
+        /* SOLUCIÓN */
+        
+    </style>
+</head>
+
+<body>
+    <div class="contenedor-formulario">
+        <div class="cabecera-formulario">
+            <h1>Contáctanos</h1>
+            <p>Estaremos encantados de ayudarte</p>
+        </div>
+
+        <div class="cuerpo-formulario">
+            <form>
+                <div class="grupo-campo">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="asunto">Asunto *</label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="">Selecciona un asunto</option>
+                        <option value="consulta">Consulta General</option>
+                        <option value="soporte">Soporte Técnico</option>
+                        <option value="ventas">Información de Ventas</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="grupo-textarea">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                    <span class="contador-caracteres">0 / 500</span>
+                </div>
+
+                <div class="grupo-checkbox">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">
+                        Acepto los términos y condiciones y la política de privacidad
+                    </label>
+                </div>
+
+                <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
