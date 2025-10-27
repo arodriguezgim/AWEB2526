@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PseudoClases</title>
+    <style>
+        .caja {
+            background-color: aquamarine;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .caja:hover {
+            background-color: blue;
+            color: white;
+            transition-duration: 1s;   
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid blue;
+        }
+        button:hover {
+            background-color: aquamarine;
+            border: 2px solid orangered;
+            padding: 30px;
+            transition-duration: 2s;
+        }
+        li {
+            background-color: bisque;
+        }
+        /*
+        li:first-child {
+            background-color: aqua;
+        }
+        li:last-child {
+            background-color: lightgoldenrodyellow;
+        }
+           
+        li:nth-child(even) {
+            background-color: lightgreen;
+        } */
+
+        a {
+            color: black;
+        }
+        a:link {
+            /* No visitados*/
+            color: blue;
+        }
+        a:visited {
+            color: red;
+        }
+        a:hover {
+            background-color: aquamarine;
+            transition-duration: 1s;
+        }
+        a:active {
+            /* Con el click pulsado*/
+            color: black;
+            font-weight: bold;
+            background-color: aliceblue;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo Clases</h1>
+    <div class="caja">
+        <h2>Esto es un subtítulo</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo culpa alias quibusdam odit rem impedit eveniet numquam? Eius reprehenderit mollitia ab, excepturi, recusandae illum, impedit enim vero possimus asperiores ipsum.</p>
+    </div>
+    <button>Púlsame</button>
+    <hr>
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+        <li>Elemento 6</li>
+    </ul>
+    <hr>
+    <ul>
+        <li><a href="https://www.google.com">Enlace 1</a></li>
+        <li><a href="https://www.google1.com">Enlace 2</a></li>
+        <li><a href="https://www.google2.com">Enlace 3</a></li>
+        <li><a href="https://www.google3.com">Enlace 4</a></li>
+        <li><a href="https://www.google4.com">Enlace 5</a></li>
+        <li><a href="https://www.google5.com">Enlace 6</a></li>
+    </ul>
+</body>
+</html>
