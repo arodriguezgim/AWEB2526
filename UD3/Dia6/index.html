@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        /* Contenedor*/
+        .contenedor-flex {
+            display: flex;
+            justify-content: center;
+            /*flex-direction: row;
+            flex-wrap: wrap;*/
+            /*flex-flow: row nowrap;*/
+            flex-wrap: wrap;
+            
+
+            background-color: burlywood;
+            padding: 10px;
+            border: 2px solid black;
+            height: 400px;
+            
+        }
+        /* Elementos*/
+        .contenedor-flex div {
+            width: 100px;
+            margin: 10px;
+            background-color: lightgreen;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+            border: 2px solid black;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Repaso de Flexbox</h1>
+    <hr>
+    <div class="contenedor-flex">
+        <div style="background-color: red; flex: 1">1</div>
+        <div style="background-color: yellow; flex: 4">2</div>
+        <!--<div style="background-color: blue; flex-grow: 4;">3</div>
+        <div style="background-color: greenyellow; flex-grow: 1;">4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>-->
+    </div>
+</body>
+</html>
