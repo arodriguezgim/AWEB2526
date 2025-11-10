@@ -13,8 +13,9 @@
 7. Display y Visibilidad
 8. Posicionamiento Básico
 9. Flexbox Básico
-10. Responsive Design Básico
-11. Pseudo-clases Básicas
+10. CSS Grid Básico
+11. Responsive Design Básico
+12. Pseudo-clases Básicas
 
 ---
 
@@ -791,16 +792,22 @@ Flexbox es un sistema de layout que facilita la distribución de elementos en un
 
 ---
 
-## 10. Responsive Design Básico
+[## 10. Grid Básico](./Grid/readme.md)
 
-### 10.1 Viewport Meta Tag
+Grid es un sistema de layout que facilita la distribución de elementos en dos dimensiones (filas y columnas).
+
+[Ejercicios de GRID](./Grid/Ejercicios/readme.md)
+
+## 11. Responsive Design Básico
+
+### 11.1 Viewport Meta Tag
 
 ```html
 <!-- SIEMPRE incluir en el <head> -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-### 10.2 Media Queries básicas
+### 11.2 Media Queries básicas
 
 ```css
 /* Móviles pequeños */
@@ -832,7 +839,7 @@ Flexbox es un sistema de layout que facilita la distribución de elementos en un
 }
 ```
 
-### 10.3 Breakpoints comunes
+### 11.3 Breakpoints comunes
 
 ```css
 /* Mobile First (diseño desde móvil hacia arriba) */
@@ -856,7 +863,7 @@ Flexbox es un sistema de layout que facilita la distribución de elementos en un
 }
 ```
 
-### 10.4 Imágenes responsive
+### 11.4 Imágenes responsive
 
 ```css
 img {
@@ -885,7 +892,7 @@ img {
 }
 ```
 
-### 10.5 Ejemplo completo: Layout responsive
+### 11.5 Ejemplo completo: Layout responsive
 
 ```css
 /* Mobile First */
@@ -937,9 +944,9 @@ img {
 
 ---
 
-## 11. Pseudo-clases Básicas
+## 12. Pseudo-clases Básicas
 
-### 11.1 Pseudo-clases para enlaces
+### 12.1 Pseudo-clases para enlaces
 
 ```css
 /* Enlaces */
@@ -949,7 +956,7 @@ a:hover { color: red; } /* Al pasar el ratón */
 a:active { color: orange; } /* Al hacer clic */
 ```
 
-### 11.2 Pseudo-clases para formularios
+### 12.2 Pseudo-clases para formularios
 
 ```css
 /* Formularios */
@@ -968,7 +975,7 @@ button:hover {
 }
 ```
 
-### 11.3 Pseudo-clases de posición
+### 12.3 Pseudo-clases de posición
 
 ```css
 /* Posición */
@@ -997,7 +1004,7 @@ li:nth-child(even) {
 }
 ```
 
-### 11.4 Ejemplos prácticos
+### 12.4 Ejemplos prácticos
 
 #### Lista estilizada
 ```css
