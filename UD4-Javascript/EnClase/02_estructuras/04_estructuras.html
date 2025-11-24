@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+    <script>
+        /*
+        let contador = 0;
+        while ( contador <= 10 ){
+            // Todo el codigo de aqui se ejecutará tantas veces mientras se de esa condicion
+            contador = contador + 1;
+            console.log("El valor de contador es: " + contador );
+            
+        }
+        */
+       // Escribe un programa que use while para mostrar los números del 20 al 10 en orden descendente.
+       /*let numero = 20;
+       while (numero >= 10 ) {
+        console.log( numero );
+        numero--;
+       }*/
+       // Crea un programa que use while para sumar los números del 1 al 50 y muestre el resultado final.
+       /*let contador = 1;
+       let resultado = 0;
+       while ( contador <= 50 ){
+        resultado = resultado + contador;
+        contador++;
+       }
+       console.log( "El resultado es: " + resultado );*/
+       // Escribe un programa que use while para mostrar solo los números pares entre 1 y 30.
+       /*
+       let contador = 2;
+       while ( contador <= 30 ){
+        console.log( contador );
+        contador = contador + 2;
+       }
+        */
+       //  Crea un programa que use while para contar cuántos números del 1 al 100 son divisibles entre 7.
+    /*let contador = 1;
+    let numEntreSiete = 0;
+    while ( contador <= 100 ){
+        if ( contador % 7 == 0 ){
+            // console.log( contador );
+            numEntreSiete++;
+        }
+
+        contador++;
+    }
+    console.log( "Los números del 1 al 100 divisibles entre 7 son: " + numEntreSiete );*/
+    //  Escribe un programa que use while para mostrar la tabla de multiplicar del 8 (del 8x1 al 8x10).
+    let contador = 1;
+    let tabla = 8;
+    let div = document.getElementById("tabla");
+    while ( contador <= 10 ){
+        console.log( tabla + " x " + contador + " = " + (tabla*contador) );
+
+        contador++;
+    }
+    // Crea un programa que use while para encontrar y mostrar el primer número mayor que 200 que sea divisible entre 17.
+    /*let numero = 200;
+    let encontrado = false;
+    while ( !encontrado ) {
+        if ( numero % 17 == 0 ){
+            console.log( "El numero es: " + numero );
+            encontrado = true;
+        }
+        numero++;
+    }*/
+    // Escribe un programa que use while para calcular el factorial de 6 (6! = 6 × 5 × 4 × 3 × 2 × 1).
+    /*let numero = 6;
+    let factorial = 1;
+    let i = numero;
+    while ( i >= 1 ){
+        factorial = factorial * i;
+        i--;
+    }
+    console.log( "El faactorial de 6 es: " + factorial);*/
+    // Crea un programa que use while para mostrar los primeros 10 números de la secuencia de Fibonacci (0, 1, 1, 2, 3, 5, 8...).
+    /*let contador = 1;
+    let a = 0;
+    let b = 1;
+    console.log( a );
+    while ( contador < 10 ){
+        console.log( b );
+        let auxiliar = a + b;
+        a = b;
+        b = auxiliar;
+        contador++;
+    }*/
+    </script>
+    
+</head>
+<body>
+    <h1>Bucle While</h1>
+    <p>While repite un código MIENTRAS la condicion sea verdadera.</p>
+
+    <p>Tabla de multiplicar</p>
+    <div id="tabla"></div>
+
+</body>
+</html>
