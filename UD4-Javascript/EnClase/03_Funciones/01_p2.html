@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        // 2 - Crea un input para la edad y un botón. Al hacer clic, 
+        // debe indicar si la persona es mayor de edad (18+) o menor de edad.
+        function verificarEdad() {
+            let edad = parseInt(document.getElementById("edad").value);
+            if (edad >= 18) {
+                document.getElementById("resultado").textContent = "Eres mayor de edad";
+            } else {
+                document.getElementById("resultado").textContent = "Eres menor de edad";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 2</h1>
+
+    <input type="number" id="edad" placeholder="Escribe tu edad">
+    <button onclick="verificarEdad()">Verificar</button>
+    <p id="resultado"></p>
+
+
+</body>
+</html>
