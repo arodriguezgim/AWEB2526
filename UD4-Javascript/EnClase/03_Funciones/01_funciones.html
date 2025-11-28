@@ -6,17 +6,19 @@
     <title>Funciones</title>
     <script>
         function saludar(){
-            alert("Hola Alberto");
+            let nombre = document.getElementById("camponombre").value;
+            document.getElementById("resultado").textContent = "Hola, " + nombre
         }
+        
 
-
-        // Llamar a la funcion
-        // saludar();
 
     </script>
 </head>
 <body>
     <h1>Funciones</h1>
-    <button onclick="saludar();">Quiero Saludar</button>
+    <button onclick="saludar();">Saludar a</button>
+
+    <input type="text" id="camponombre" placeholder="Escribe tu nombre">
+    <p id="resultado"></p>
 </body>
 </html>

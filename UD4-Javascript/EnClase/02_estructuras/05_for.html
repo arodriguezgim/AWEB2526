@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1 - Crea un programa que use un bucle for para mostrar los números del 1 al 20.
+        /*
+        for ( let i = 1; i <= 20; i++){
+            console.log(i);
+        }
+        */
+       // 2 - Escribe un programa que use for para mostrar los números del 30 al 15 en orden descendente.
+       /*for ( let i = 30; i >= 15; i = i - 1 ){
+            console.log( i )
+       }*/
+       // 3 - Crea un programa que use for para sumar los números del 1 al 100 
+       // y muestre el resultado final.
+       /*let suma = 0
+       for (let i = 1; i <= 100; i = i +1 ){
+            suma = suma + i
+       }
+       console.log( " La suma total es: " + suma )*/
+       // 4 - Escribe un programa que use for para mostrar 
+       // solo los números impares entre 1 y 40.
+       /*for( let i = 1; i <= 40; i = i + 2){
+        console.log( i)
+       }*/
+       // 5 - Crea un programa que use for para contar cuántos 
+       // números del 1 al 80 son divisibles entre 5.
+       /*let contador = 0;
+       for( let i = 1; i <= 80; i++ ){
+            if ( i % 5 == 0 ){
+                contador++
+            }
+       }
+       console.log( contador )*/
+       // 6 - Escribe un programa que use for para mostrar la tabla 
+       // de multiplicar del 9 (del 9x1 al 9x10).
+        /*let tabla = 9;
+        for( let i = 1; i <= 10; i++ ){
+            console.log( tabla + " x " + i + " = " + ( tabla*i ))
+        } */
+        // 7 - Escribe un programa que use for para calcular 
+        // el factorial de 7 (7! = 7 × 6 × 5 × 4 × 3 × 2 × 1).
+        /*let numero = 7
+        let resultado = 1
+        for ( let i = numero; i >= 1; i--){
+            resultado = resultado * i
+        }
+        console.log( resultado )*/
+        // 8 - Crea un programa que use for para mostrar los primeros 12 
+        // números de la secuencia de Fibonacci (0, 1, 1, 2, 3, 5, 8...).
+        let a = 0
+        console.log( a )
+        let b = 1
+        console.log( b )
+        for( let i = 1; i <= 20; i++ ){
+            let siguiente = a + b
+            console.log( siguiente )
+            a = b
+            b = siguiente
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1>Ejercicios bucle For</h1>
+</body>
+</html>
