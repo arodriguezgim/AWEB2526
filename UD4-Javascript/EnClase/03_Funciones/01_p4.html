@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        body{
+            background: lightpink;
+        }
+        .formulario{
+            background: rgb(237, 104, 124);
+        }
+    </style>
+    <script>
+        // 4 - Crea dos inputs para base y altura de un 
+        // rectángulo, y un botón. Al hacer clic, debe 
+        // calcular y mostrar el área.
+        function areaRectangulo() {
+            let base = parseInt( document.getElementById("base").value);
+            let altura = parseInt( document.getElementById("altura").value);
+            let area = base * altura;
+            document.getElementById("arearectangulo").textContent = "El área del rectángulo es: " + area;
+            document.getElementById("base").value = "";
+            document.getElementById("altura").value = "";
+        }
+        function areaCuadrado(){
+            let lado = parseInt( document.getElementById("lado").value);
+            let resultado = lado * lado;
+            document.getElementById("areacuadrado").textContent = "El área del cuadrado es: " + resultado;
+            document.getElementById("lado").value = "";
+        }
+        function areaCirc(){
+            let radio = parseInt( document.getElementById("radio").value);
+            let area = 3.14159 * radio * radio;
+            let perimetro = 2 * 3.14159 * radio;
+            document.getElementById("areacirc").textContent = "El área de la circunferencia es: " + area + " y el perímetro es: " + perimetro;
+            document.getElementById("radio").value = "";
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 4</h1>
+    <h2>Area del rectángulo</h2>
+    
+        <fieldset class="formulario">
+            <br>
+            <input type="number" id="base" placeholder="Base">
+            <input type="number" id="altura" placeholder="Altura">
+            <br><br>
+            <button onclick="areaRectangulo()">Calcular Area</button>
+            <p id="arearectangulo"></p>
+        </fieldset>
+    
+    <h2>Area del cuadrado</h2>
+        
+        <fieldset class="formulario">
+            <br>
+            <input type="number" id="lado" placeholder="Lado">
+            <br><br>
+            <button onclick="areaCuadrado()">Calcular Area</button>
+            <p id="areacuadrado"></p>
+        </fieldset>
+    
+    <h2>Area y perímetro de la circunferencia</h2>
+        <fieldset class="formulario">
+            <br>
+            <input type="number" id="radio" placeholder="Radio">
+            <br><br>
+            <button onclick="areaCirc()">Calcular Area y Perímetro</button>
+            <p id="areacirc"></p>
+        </fieldset>
+    <h2>Area del rombo</h2>
+    
+
+
+
+</body>
+</html>

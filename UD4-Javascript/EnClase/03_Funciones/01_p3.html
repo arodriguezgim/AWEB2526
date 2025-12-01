@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        // 3 - Crea un input para un número y un botón. 
+        // Al hacer clic, debe mostrar la tabla de multiplicar de ese 
+        // número (del 1 al 10).
+
+        function generarTabla() {
+            // declaro una variable para saber el numero de tabla
+            let numero = parseInt(document.getElementById("numero").value);
+            let resultado = "<ul>";
+            for( let i= 1; i <= 10; i++ ){
+                resultado = resultado + "<li>" + numero + " x " + i + " = " + ( numero * i ) + "</li>";
+            }
+            resultado = resultado + "</ul>";
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 3</h1>
+
+    <input type="number" id="numero" placeholder="Número">
+    <button onclick="generarTabla()">Generar Tabla</button>
+    <div id="resultado"></div>
+
+</body>
+</html>
