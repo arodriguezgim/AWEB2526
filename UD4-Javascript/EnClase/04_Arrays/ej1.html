@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*Crea un array vacío y añade tres elementos 
+        usando push(). Muestra el resultado.
+            Ejemplo:
+            Entrada: ["manzana", "pera", "uva"]*/
+        /*Crea un array con colores y busca si contiene
+         "azul" usando includes().
+            Ejemplo:
+            Entrada: ["rojo", "verde", "azul"]
+            Salida: true*/
+        let colores = ["rojo", "verde", "azul"];
+
+        console.log(  colores.includes("amarillo") );
+        /* Escribe una función que reciba un array de números y devuelva solo los números pares.
+            Ejemplo:
+            Entrada: [1, 2, 3, 4]
+            Salida: [2, 4]*/
+        let numeros = [2,3,4,5,6,7,8,9];
+        let solucion = [];
+        for ( let i = 0; i < numeros.length; i++ ){
+            if( numeros[i] % 2 == 0 ){
+                solucion.push( numeros[i] );
+            }
+        }
+        console.log( solucion );
+        
+    </script>
+</head>
+<body>
+    <h1>Ejercicios Javascript</h1>
+</body>
+</html>
