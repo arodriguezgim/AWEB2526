@@ -1,0 +1,52 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap</title>
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script>
+            function cambiarTexto() {
+                document.getElementById('texto1').textContent = 'Este texto ha sido modificado!!';
+            }
+            function cambiarColor(){
+                const colores = ['green', 'red', 'yellow', 'blue', '#65A231'];
+                let colorSeleccionado = colores[ Math.floor(Math.random() * colores.length) ];
+
+                document.getElementById('texto1').style.backgroundColor = colorSeleccionado;
+            }
+            function mostrarOcultar() {
+                const caja = document.getElementById('caja2');
+
+                if ( caja.style.display == 'none' ){
+                    caja.style.display = 'block'; 
+                } else {
+                    caja.style.display = 'none';
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container py-4">
+
+            <h1>Ejercicio 1: cambiar texto y fondo</h1>
+            <p id="texto1">Este es el texto original</p>
+            <button onclick="cambiarTexto()" class="btn btn-outline-info">
+                Cambiar Texto
+            </button>
+            <button onclick="cambiarColor()" class="btn btn-outline-danger">
+                Cambiar color
+            </button>
+            <hr>
+            <h1>Ejercicio 2: Mostrar/Ocultar</h1>
+            <div id="caja2" style="padding: 20px; background-color: #3498db; color: white; border-radius: 10px;">
+                Soy una caja que puedes ocultar!!
+            </div>
+            <button onclick="mostrarOcultar()" class="btn btn-outline-warning m-1">Mostrar / Ocultar</button>
+            
+        </div>
+    </body>
+    </html>
