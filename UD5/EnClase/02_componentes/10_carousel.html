@@ -17,7 +17,7 @@
     <!--https://picsum.photos/1600/800-->
     <div class="container py-4">
 
-        <div id="slider-smr" class="carousel slide" data-bs-ride="carousel">
+        <div id="slider-smr" class="carousel slide carousel-fade" data-bs-ride="carousel">
         
             <div class="carousel-indicators">
                 <button class="active" data-bs-target="#slider-smr" data-bs-slide-to="0"></button>
@@ -27,19 +27,28 @@
 
 
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active" data-bs-interval="5000">
                     <img class="d-block w-100" src="./img/1.jpg" alt="">
 
-                    <div class="carousel-caption">
+                    <div class="carousel-caption d-none d-lg-block">
                         <h5 class="display-1">Primera imagen</h5>
                         <p>Esta es la descripción de la primera imagen.</p>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="2000">
                     <img class="d-block w-100" src="./img/2.jpg" alt="">
+
+                    <div class="carousel-caption d-none d-lg-block">
+                        <h5 class="display-1">Segunda imagen</h5>
+                        <p>Esta es la descripción de la segunda imagen.</p>
+                    </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="10000">
                     <img class="d-block w-100" src="./img/3.jpg" alt="">
+                    <div class="carousel-caption d-none d-lg-block">
+                        <h5 class="display-1">Tercera imagen</h5>
+                        <p>Esta es la descripción de la tercera imagen.</p>
+                    </div>
                 </div>
             </div>
 
