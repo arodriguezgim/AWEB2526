@@ -1,0 +1,38 @@
+/*============================ Propiedades Globales =================*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/*================   MENU   =================*/
+#mi-menu li > a {
+    font-size: 18px !important;
+    font-weight: 600;
+}
+#mi-menu form > button {
+    color: #3f3f3f;;
+}
+/*==========  SLIDER DE IMAGENES   ==========*/
+.carousel-inner {
+    max-height: 39rem !important;
+}
+
+/*========== PANTALLAS SM   ==========*/
+
+@media( max-width:768px){
+    #intro {
+        width: 90% !important;
+        margin: auto;
+    }
+
+    .icono-wrap {
+        flex-wrap: wrap;
+    }
+}
+/*========== SERVICIOS   ==========*/
+.servicio-fila {
+    width: 90% !important;
+    text-align: center;
+}
