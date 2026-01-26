@@ -19,20 +19,59 @@ body {
     max-height: 39rem !important;
 }
 
+/*========== SERVICIOS   ==========*/
+.servicio-fila {
+    width: 90% !important;
+    text-align: center;
+}
+
+/*========== MAPA   ==========*/
+.mapa {
+    background: url(../img/mapa.PNG);
+    width: 100%;
+    height: 500px;
+}
+
+#local {
+    background-color: #f3f3f3;
+    padding-bottom: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 50%;
+    margin-left: 100px;
+    padding-top: 150px;
+}
+
 /*========== PANTALLAS SM   ==========*/
 
 @media( max-width:768px){
-    #intro {
+    #intro, #equipo {
         width: 90% !important;
         margin: auto;
     }
 
     .icono-wrap {
         flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #equipo p {
+        display: none;
     }
 }
-/*========== SERVICIOS   ==========*/
-.servicio-fila {
-    width: 90% !important;
-    text-align: center;
+/*========== PANTALLAS GRANDES   ==========*/
+@media(max-width:1200px){
+    #local {
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+
+    .wrapper {
+        width: 90%;
+        margin: auto;
+        padding-top: 50px;
+    }
 }
